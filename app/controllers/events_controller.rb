@@ -25,7 +25,6 @@ class EventsController < ApplicationController
     end
   end
 
-
   private
 
   def event_params
