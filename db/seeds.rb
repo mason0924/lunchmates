@@ -8,21 +8,24 @@
 
 # Seed file
 
+Booking.destroy_all
+User.destroy_all
+
 # User
-
-user_1 = User.new( user_firstname: Azadeh, user_lastname: Aram, picture: img_1)
-user_2 = User.new(id: 2, user_firstname: Mana, user_lastname: Jalili, picture: img_2)
-user_3 = User.new(id: 3, user_firstname: Mattia, user_lastname: Macor, picture: img_3)
-user_4 = User.new(id: 4, user_firstname: Mason, user_lastname: Tan, picture: img_4)
-
-# Booking
-booking_1 = Booking.new( user_id: user_1, event_id: event_1)
-booking_2 = Booking.new(id: 2, user_id: user_2, event_id: event_2)
-booking_3 = Booking.new(id: 3, user_id: user_3, event_id: event_3)
-booking_4 = Booking.new(id: 4, user_id: user_4, event_id: event_4)
+user_1 = User.create( first_name: "Azadeh", last_name: "Aram", email:"azadeh@gmail.com", password: "123456" )
+user_2 = User.create( first_name: "Mana", last_name: "Jalili", email:"mana@gmail.com", password: "123456" )
+user_3 = User.create( first_name: "Mattia", last_name: "Macor", email:"mattia@gmail.com", password: "123456" )
+user_4 = User.create( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456" )
 
 # Event
-event_1 = Event.new(id: 1, event_name: " Mix and match", description: " let's Mix and Match ", date: " 01.03.2020 ", time: " 1pm " ,hosted_by: user_1, restaurant_name: " Mix and Match ", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price: " $$ ")
-event_2 = Event.new(id: 2, event_name: " KFC lovers", description: " let's go to KFC ", date: "01.03.2020 ", time: "1:13pm" , hosted_by: user_2, restaurant_name: " KFC ", restaurant_address: " Badstraße 4, 13357 Berlin ", restaurant_price: "$")
-event_3 = Event.new(id: 3, event_name: " Ishin ", description: " Who's in for Ishin ", date: " 01.03.2020 ", time: " 1pm " ,hosted_by: user_3, restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price: " $ ")
-event_4 = Event.new(id: 4, event_name: " Maximilians lovers", description: " let's Mix and Match ", date: " 01.03.2020 ", time: " 2pm " ,hosted_by: user_1, restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price: " $$$ ")
+event_1 = Event.create( event_name: " Mix and match", description: " let's Mix and Match " ,user: user_1, restaurant_name: " Mix and Match ", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2 )
+event_2 = Event.create( event_name: " KFC lovers", description: " let's go to KFC ",  user: user_2, restaurant_name: " KFC ", restaurant_address: " Badstraße 4, 13357 Berlin ", restaurant_price_range: 1 )
+event_3 = Event.create( event_name: " Ishin ", description: " Who's in for Ishin " ,user: user_3, restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1 )
+event_4 = Event.create( event_name: " Maximilians lovers", description: " let's go to Maximilians ", user: user_1, restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3)
+
+
+# Booking
+booking_1 = Booking.create( user: user_1, event_id: event_1 )
+booking_2 = Booking.create( user: user_2, event_id: event_2 )
+booking_3 = Booking.create( user: user_3, event_id: event_3 )
+booking_4 = Booking.create( user: user_4, event_id: event_4 )
