@@ -5,12 +5,11 @@
         <div class="event index-event-card">
           </div>
             <div class="name">
-              <button type="button" class="btn btn-outline-secondary"><%= link_to event.name, event_path(event) %></button>
+              <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event) %></button>
               <p><%= event.description %></p>
+              <p><%= event.user_id %></p>
+
             </div>
-          <div class="price">
-            <%= event.price %> €
-          </div>
         </div>
       </div>
     <% end %>
