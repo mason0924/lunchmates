@@ -6,8 +6,9 @@ class DashboardsController < ApplicationController
     @events = Event.where(user_id: current_user])
   end
 
-  def show
-    @booking = Booking.find(params[:id])
+  def dashboard
+    @hosting_events = current_user.events
+    @joining_events = current_user.bookings
   end
 
 end
