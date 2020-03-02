@@ -2,6 +2,14 @@ class BookingsController < ApplicationController
   before_action :authenticate_user!
 
 
+  def index
+    @bookings = Booking.all
+  end
+
+  def new
+    @booking = Booking.new
+  end
+
   def create
     @booking = Booking.new(booking_params)
     # Find the event
