@@ -39,13 +39,13 @@ class EventsController < ApplicationController
     # Only for update and create you write here the paths of the buttons
   end
 
-  # def destroy
-  #   @event = Event.find(params[:id])
-  #   @event.destroy
-  #   authorize @event
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    authorize @event
 
-  #   redirect_to events_path
-  # end
+    redirect_to events_path
+  end
 
 
   private
