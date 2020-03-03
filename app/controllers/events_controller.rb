@@ -16,9 +16,9 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-    authorize @event
     @event.user = current_user
-    if @event.save!
+    authorize @event
+    if @event.save
       redirect_to event_path(@event)
     else
       render :new
@@ -32,17 +32,19 @@ class EventsController < ApplicationController
 
   def update
     @event = Event.find(params[:id])
-    @event.update(event_params)
     authorize @event
-
-    redirect_to events_path
+    if @event.update(event_params)
+      redirect_to events_path
+    else
+      render :edit
+    end
     # Only for update and create you write here the paths of the buttons
   end
 
   def destroy
     @event = Event.find(params[:id])
-    @event.destroy
     authorize @event
+    @event.destroy
 
     redirect_to events_path
   end

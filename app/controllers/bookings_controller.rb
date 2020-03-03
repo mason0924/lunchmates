@@ -1,6 +1,4 @@
 class BookingsController < ApplicationController
-  before_action :authenticate_user!
-
 
   def index
     @bookings = policy_scope(Booking)
@@ -19,17 +17,17 @@ class BookingsController < ApplicationController
     @booking.event = @event
     # Find the user
     @booking.user = current_user
+    authorize @booking
     if @booking.save
       redirect_to bookings_path, notice: "Your booking has been created..."
     else
       render :new
     end
-     authorize @booking
   end
 
   def destroy
-    authorize @booking
     @booking = Booking.find(params[:id])
+    authorize @booking
     @booking.destroy
 
     redirect_to bookings_path
