@@ -1,0 +1,7 @@
+<%= form_for([@event, @booking]) do |f| %>
+
+  <%= f.text_field :date, placeholder: 'Date', class: 'form-control', readonly: 'true' %>
+  <%= f.hidden_field :event_id, value: @event.id %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit "Create Event", class: "btn btn-primary" %>
+<% end %>

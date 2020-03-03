@@ -1,5 +1,6 @@
 <div class="container">
   <div class="row">
+    <%= link_to "Create", new_event_path, class: "btn btn-success" %>
     <% @events.each do |event| %>
       <div class="col-12 col-sm-6 col-md-3">
         <div class="event index-event-card">
@@ -15,3 +16,4 @@
       </div>
     <% end %>
   </div>
+</div>
