@@ -1,10 +1,4 @@
 class BookingsController < ApplicationController
-
-  def index
-    @bookings = policy_scope(Booking)
-    @events = Event.where(user: current_user)
-  end
-
   def new
     @booking = Booking.new
     authorize @booking
@@ -30,7 +24,7 @@ class BookingsController < ApplicationController
     authorize @booking
     @booking.destroy
 
-    redirect_to bookings_path
+    redirect_to dashboard_path
   end
 
 
