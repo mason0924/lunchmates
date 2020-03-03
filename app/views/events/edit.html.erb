@@ -1,0 +1,12 @@
+<h1>Update the event</h1>
+<%= simple_form_for(@event) do |f| %>
+    <%= f.input :event_name %>
+    <%= f.input :description %>
+    <%= f.input :restaurant_name %>
+    <%= f.input :restaurant_address %>
+    <%= f.input :restaurant_price_range %>
+    <%= f.input :date %>
+    <%= f.input :spots %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+<% end %>
+<%= link_to 'Back', events_path, class: "btn btn-primary" %>
