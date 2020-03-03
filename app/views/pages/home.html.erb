@@ -1,25 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>HOMEPAGE</title>
-</head>
+<div class='home-banner'>
+  <h1>LunchMates</h1>
+  <h3> <span style="color:#172b4d"></span></h3>
 
-<body>
+  <%= form_tag events_path, method: :get, class: "form-inline homepage-form justify-content-center " do %>
 
-  <div class='home-banner'>
-    <h1>LunchMates</h1>
-    <h3> <span style="color:#172b4d"></span></h3>
-
-       <%= form_tag events_path, method: :get, class: "form-inline homepage-form justify-content-center " do %>
-
-        <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Enter your address/zipcode"
-      %>
-      <%= submit_tag "Find your LunchMates", class: "btn btn-info", id: "Event-submit" %>
-      <% end %>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Enter your address/zipcode"
+    %>
+  
+    <%= submit_tag "Find your LunchMates", class: "btn btn-info", id: "Event-submit" %>
+  <% end %>
 </div>
-</body>
-</html>
