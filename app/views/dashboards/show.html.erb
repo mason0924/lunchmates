@@ -23,7 +23,7 @@
     <strong> <%= booking.event.event_name %> </strong>
     <%= booking.event.description %>
     <div class="col-3 border-left">
-      <%= link_to "Unjoin", booking_path(booking), method: :delete %>
+      <%= link_to "Unjoin", dashboard_path, method: :delete %>
     </div>
   <% end %>
 </div>
