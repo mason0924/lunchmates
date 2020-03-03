@@ -1,0 +1,30 @@
+<h1>Dashboard</h1>
+<br>
+<br>
+<br>
+<br>
+<h2>Hosting (Events)</h2>
+
+<div class="container">
+  <%= link_to "Confirmed", new_event_path, class: "btn btn-success" %>
+    <% @events.each do |event| %>
+        <div class="col-12 col-sm-6 col-md-3">
+          <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
+          <p><%= event.restaurant_name %></p>
+        </div>
+    <% end %>
+</div>
+
+
+<h2>Joining (Bookings)</h2>
+
+<div class="container mt-5">
+  <% @bookings.each do |booking| %>
+    <strong> <%= booking.event.event_name %> </strong>
+    <%= booking.event.description %>
+    <div class="col-3 border-left">
+      <%= link_to "Unjoin", booking_path(booking), method: :delete %>
+    </div>
+  <% end %>
+</div>
+
