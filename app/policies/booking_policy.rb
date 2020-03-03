@@ -5,6 +5,10 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
+  def new?
+   user = current_user
+  end
+
   def create?
     return true
   end
