@@ -3,11 +3,13 @@ class BookingsController < ApplicationController
 
 
   def index
-    @bookings = Booking.all
+    @bookings = policy_scope(Booking)
+    # @bookings = Booking.all
   end
 
   def new
     @booking = Booking.new
+    authorize @booking
   end
 
   def create
@@ -22,9 +24,11 @@ class BookingsController < ApplicationController
     else
       render :new
     end
+     authorize @booking
   end
 
   def destroy
+    authorize @booking
     @booking = Booking.find(params[:id])
     @booking.destroy
 
