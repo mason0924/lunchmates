@@ -1,19 +1,9 @@
 <div class="container">
-  <div class="row">
-    <%= link_to "Create", new_event_path, class: "btn btn-success" %>
+  <%= link_to "Create", new_event_path, class: "btn btn-success" %>
     <% @events.each do |event| %>
-      <div class="col-12 col-sm-6 col-md-3">
-        <div class="event index-event-card">
-          </div>
-            <div class="name">
-              <button type="button" class="btn btn-outline-secondary"><%= link_to event.name, event_path(event) %></button>
-              <p><%= event.description %></p>
-            </div>
-          <div class="price">
-            <%= event.price %> €
-          </div>
+        <div class="col-12 col-sm-6 col-md-3">
+          <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
+          <p><%= event.restaurant_name %></p>
         </div>
-      </div>
     <% end %>
-  </div>
 </div>
