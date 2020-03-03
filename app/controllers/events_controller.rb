@@ -25,6 +25,29 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+    authorize @event
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    @event.update(event_params)
+    authorize @event
+
+    redirect_to events_path
+    # Only for update and create you write here the paths of the buttons
+  end
+
+  # def destroy
+  #   @event = Event.find(params[:id])
+  #   @event.destroy
+  #   authorize @event
+
+  #   redirect_to events_path
+  # end
+
+
   private
 
   def event_params
