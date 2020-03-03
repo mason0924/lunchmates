@@ -1,7 +1,7 @@
 class EventsController < ApplicationController
 
   def index
-    @events = policy_scope(Event)
+   @events = policy_scope(Event)
   end
 
   def show
