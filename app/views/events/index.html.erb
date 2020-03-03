@@ -1,9 +1,9 @@
 <div class="container">
-  <% @events.each do |event| %>
-      <div class="col-12 col-sm-6 col-md-3">
-        <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
-        <p><%= event.restaurant_name %></p>
-        <p><%= event.user_id %></p>
-      </div>
-  <% end %>
+  <%= link_to "Create", new_event_path, class: "btn btn-success" %>
+    <% @events.each do |event| %>
+        <div class="col-12 col-sm-6 col-md-3">
+          <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
+          <p><%= event.restaurant_name %></p>
+        </div>
+    <% end %>
 </div>
