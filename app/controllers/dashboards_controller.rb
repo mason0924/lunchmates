@@ -1,9 +1,10 @@
 class DashboardsController < ApplicationController
     # before_action :authenticate_user!
 
-  def dashboard
-    @bookings = Booking.all
+  def index
+    @bookings = policy_scope(Booking)
     @events = Event.where(user_id: current_user[params[:id]])
+
   end
 
   def event
