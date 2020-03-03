@@ -51,5 +51,6 @@ booking_2 = Booking.create!( user: user_6, event: event_6 )
 booking_1 = Booking.create!( user: user_9, event: event_8 )
 
 
+
 puts "Finished"
 puts "Now you have #{User.all.count} users, #{Event.all.count} events, and #{Booking.all.count} bokings"
