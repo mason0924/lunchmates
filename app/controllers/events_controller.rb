@@ -2,8 +2,12 @@ class EventsController < ApplicationController
 
   def index
     @events = policy_scope(Event)
-    @events_map = Event.geocoded #returns events with coordinates
-    @markers = @events_map.map do |event|
+    if params[:query].present?
+      # Search by the location
+      @events = @events.near(params[:query], 10)
+    end
+    @geocoded_events = @events.geocoded #returns events with coordinates
+    @markers = @geocoded_events.map do |event|
        {
          lat: event.latitude,
          lng: event.longitude,
