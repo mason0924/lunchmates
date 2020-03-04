@@ -1,16 +1,15 @@
 <div class='home-banner'>
   <h1>LunchMates</h1>
   <h3> <span style="color:#172b4d"></span></h3>
-
-  <%= form_tag events_path, method: :get, class: "form-inline homepage-form justify-content-center " do %>
-
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Enter your address/ zipcode 📌"
+  <div class="homepage-form-wrapper">
+    <%= form_tag events_path, method: :get, class: "homepage-form justify-content-center " do %>
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Enter your address/ zipcode 📌"
     %>
-
     <%= submit_tag "Find your LunchMates", class: "btn btn-info", id: "Event-submit" %>
     <button type="button" class="btn btn-outline-success" id="myLocation">detect my location</button>
-  <% end %>
+    <% end %>
+  </div>
 </div>
