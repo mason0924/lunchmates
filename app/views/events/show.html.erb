@@ -16,6 +16,8 @@
       </div>
     </div>
   </div>
-  <%= link_to "Join", event_bookings_path(@event), method: :post %>
+  <% if policy(Booking.new(event: @event)).create? %>
+    <%= link_to "Join", event_bookings_path(@event), method: :post %>
+  <% end %>
   <%= link_to "Back", events_path(@event), class: "btn btn-primary" %>
 </div>

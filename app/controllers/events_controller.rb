@@ -1,8 +1,15 @@
 class EventsController < ApplicationController
 
   def index
-   @events = policy_scope(Event)
-  end
+    @events = policy_scope(Event)
+    @events_map = Event.geocoded #returns events with coordinates
+    @markers = @events_map.map do |event|
+       {
+         lat: event.latitude,
+         lng: event.longitude
+       }
+     end
+   end
 
   def show
     @event = Event.find(params[:id])
