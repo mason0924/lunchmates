@@ -9,24 +9,21 @@ class EventPolicy < ApplicationPolicy
     return true
   end
 
-  def new?
-    return show?
-  end
-
   def create?
     return show?
   end
 
-  def edit?
-    record.user == user
-  end
-
   def update?
-    return edit?
+    event_creator?
   end
 
   def destroy?
-    return edit?
+    event_creator?
   end
 
+  private
+
+  def event_creator?
+    record.user == user
+  end
 end
