@@ -8,8 +8,14 @@
 <div class="container">
     <% @events.each do |event| %>
         <div class="col-12 col-sm-6 col-md-3">
-          <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
+          <%= link_to event.event_name, event_path(event), class: "btn btn-info"  %>
           <p><%= event.restaurant_name %></p>
+          <% if policy(event).edit? %>
+            <%= link_to "Edit", edit_event_path(event), class: "btn btn-success" %>
+          <% end %>
+          <% if policy(event).destroy? %>
+            <%= link_to "Remove", event_path(event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %>
+          <% end %>
         </div>
     <% end %>
 </div>
