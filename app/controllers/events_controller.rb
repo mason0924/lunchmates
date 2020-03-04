@@ -45,7 +45,7 @@ class EventsController < ApplicationController
     else
       render :edit
     end
-    # Only for update and create you write here the paths of the buttons
+    # Only for update, create and destroy you write here the paths of the buttons
   end
 
   def destroy
