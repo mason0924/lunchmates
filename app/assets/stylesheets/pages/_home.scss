@@ -1,7 +1,15 @@
 // Specific CSS for your home-page
 
 .home-banner {
-    display: flex !important;
+    // display: flex !important;
     color: #172b4d;
+    align-items: center;
+}
 
-    }
+.homepage-form-wrapper{
+    width: 100%;
+}
+
+.homepage-form{
+    width: 100%;
+}

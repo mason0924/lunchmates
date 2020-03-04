@@ -66,5 +66,4 @@ const initMapbox = () => { //this is the default from mapbox
   }
 };
 
-
 export { initMapbox };
