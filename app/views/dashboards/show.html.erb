@@ -6,7 +6,6 @@
 <h2>Hosting (Events)</h2>
 
 <div class="container">
-  <%= link_to "Confirmed", new_event_path, class: "btn btn-success" %>
     <% @events.each do |event| %>
         <div class="col-12 col-sm-6 col-md-3">
           <button type="button" class="btn btn-info"><%= link_to event.event_name, event_path(event)  %></button>
