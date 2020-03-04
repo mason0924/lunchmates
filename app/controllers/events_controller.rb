@@ -1,8 +1,15 @@
 class EventsController < ApplicationController
 
   def index
-   @events = policy_scope(Event)
-  end
+    @events = policy_scope(Event)
+    @events_map = Event.geocoded #returns events with coordinates
+    @markers = @events_map.map do |event|
+       {
+         lat: event.latitude,
+         lng: event.longitude
+       }
+     end
+   end
 
   def show
     @event = Event.find(params[:id])
@@ -38,7 +45,7 @@ class EventsController < ApplicationController
     else
       render :edit
     end
-    # Only for update and create you write here the paths of the buttons
+    # Only for update, create and destroy you write here the paths of the buttons
   end
 
   def destroy

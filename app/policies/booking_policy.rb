@@ -5,12 +5,8 @@ class BookingPolicy < ApplicationPolicy
     end
   end
 
-  def new?
-   return true
-  end
-
   def create?
-    return new?
+   return record.event.user != user
   end
 
   def destroy?
