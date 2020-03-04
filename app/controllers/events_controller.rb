@@ -41,7 +41,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     authorize @event
     if @event.update(event_params)
-      redirect_to events_path
+      redirect_to dashboard_path
     else
       render :edit
     end
@@ -53,7 +53,7 @@ class EventsController < ApplicationController
     authorize @event
     @event.destroy
 
-    redirect_to events_path
+    redirect_to dashboard_path
   end
 
 
