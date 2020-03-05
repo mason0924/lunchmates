@@ -1,7 +1,9 @@
 
-<% event.photos.each do |photo| %>
-  <%= cl_image_tag photo.key, height: 200, crop: :fill %>
-<% end %>
+<div class="image-gallery" style="height: 215px; overflow: auto; white-space: nowrap;">
+  <% event.photos.each do |photo| %>
+    <%= cl_image_tag photo.key, width: 200, crop: :fill %>
+  <% end %>
+</div>
 
 <h2><%= link_to event.restaurant_name, event_path(event) %></h2>
 <p><%= event.restaurant_address %></p>
