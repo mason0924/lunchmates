@@ -28,7 +28,7 @@
       </div>
       <br>
 
-      <div class="justify-content-center">
+      <div>
        <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
         <% if policy(Booking.new(event: @event)).create? && not_booked %>
           <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom"%>
