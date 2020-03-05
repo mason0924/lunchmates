@@ -1,3 +1,9 @@
+
+<% event.photos.each do |photo| %>
+  <%= cl_image_tag photo.key, height: 200, crop: :fill %>
+<% end %>
+
 <h2><%= link_to event.restaurant_name, event_path(event) %></h2>
 <p><%= event.restaurant_address %></p>
+
 
