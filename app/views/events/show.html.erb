@@ -1,6 +1,7 @@
 <div class="container ">
   <div class="row my-5">
     <div class="col-12">
+
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
         <br>
@@ -10,9 +11,16 @@
         <p> <strong>Happening at  <%= @event.date %> </strong></p>
         <p><strong>Price range: </strong><%= @event.restaurant_price_range %></p>
       </div>
+
       <div>
+        <p>Host: <%= @event.user.first_name %></p>
+
         <p><strong><%= @event.spots %></strong> spots available</p>
+        <div class="d-flex">
+
+        </div>
       </div>
+
       <div>
         <p><%= @event.description %></p>
       </div>
