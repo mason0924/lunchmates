@@ -1,0 +1,26 @@
+.card-custom {
+  background: white;
+  margin: 10px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+
+  .lockup {
+    padding: 10px;
+    flex-grow: 1;
+  }
+}
+
+.btn-custom {
+  position: absolute;
+  right: 25px;
+  bottom: 20px;
+  background-color: #FFA892;
+  border: 1px solid #FFA892;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  .btn:active {
+    color: white;
+    background-color: #ff9277;
+  }
+}
