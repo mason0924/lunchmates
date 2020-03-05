@@ -1,7 +1,4 @@
 .btn-custom {
-  position: absolute;
-  right: 25px;
-  bottom: 20px;
   background-color: #FFA892;
   border: 1px solid #FFA892;
   border-radius: 5px;
@@ -16,3 +13,18 @@
   background-color: #ff9277;
   border: none;
 }
+
+.btn-home {
+  background-color: #FFA892;
+  border: 1px solid #FFA892;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  width:100%;
+  &:hover {
+    color:#808080;
+  }
+}
+
+
