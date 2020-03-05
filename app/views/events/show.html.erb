@@ -4,13 +4,15 @@
       <div class="event-card">
         <div class="card-infos">
           <div>
-            <h2><%= @event.event_name.capitalize %></h2>
-            <p><%= @event.description %></p>
-            <p><strong>Where:</strong> <%= @event.restaurant_name %></p>
-            <p><strong>At:</strong> <%= @event.restaurant_address %></p>
-            <p><strong>Budget:</strong><%= @event.restaurant_price_range %></p>
+            <h2> <strong> <%= @event.event_name %></strong></h2>
+            <br>
+            <p><strong><%= @event.restaurant_name %></strong></p>
+            <p><%= @event.restaurant_address %></p>
+            <br>
+            <p> <strong>Happening at</strong>  <%= @event.date %></p>
+            <p><strong>Budget: </strong><%= @event.restaurant_price_range %></p>
             <p><strong><%= @event.spots %></strong> spots available</p>
-            <p> <strong>Event time:</strong>  <%= @event.date %></p>
+            <p><%= @event.description %></p>
           </div>
         </div>
       </div>
