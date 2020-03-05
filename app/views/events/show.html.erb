@@ -13,10 +13,12 @@
       </div>
 
       <div>
-        <p>Host: <%= @event.user.first_name %></p>
-
-        <p><strong><%= @event.spots %></strong> spots available</p>
+        <p>Host: <strong> <%= @event.user.first_name %></p> </strong>
+        <br>
         <div class="d-flex">
+          <p>Guests: <% Booking.joins(:event).where(event: @event).each do |booking|  %>
+                   <strong><%= booking.user.first_name %></strong>
+                     <% end %></p>
 
         </div>
       </div>
