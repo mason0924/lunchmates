@@ -10,7 +10,7 @@
         <p><%= @event.restaurant_address %></p>
         <br>
         <p> <strong>Happening at  <%= @event.date %> </strong></p>
-        <p><strong>Price range: </strong><%= @event.restaurant_price_range %></p>
+        <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
       </div>
 
       <div>
@@ -27,17 +27,17 @@
         <p><%= @event.description %></p>
       </div>
       <br>
+
       <div>
         <% if policy(@event).edit? %>
           <%= link_to "Edit", edit_event_path(@event), class: "btn btn-success" %>
+       <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
+        <% if policy(Booking.new(event: @event)).create? && not_booked %>
+          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom"%>
         <% end %>
         <% if policy(@event).destroy? %>
           <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost" %>
         <% end %>
-         <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
-          <% if policy(Booking.new(event: @event)).create? && not_booked %>
-            <%= link_to "Join", event_bookings_path(@event), method: :post %>
-          <% end %>
           <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
             <p><strong>You already booked this event!</strong></p>
           <% end %>

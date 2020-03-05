@@ -8,7 +8,7 @@
         <%= f.input :description %>
         <%= f.input :restaurant_name %>
         <%= f.input :restaurant_address %>
-        <%= f.input :restaurant_price_range %>
+        <%= f.input :restaurant_price_range, collection: [["€", 1], ["€€", 2], ["€€€", 3]] %>
         <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :spots %>
         <%= f.button :submit, class: "btn btn-success" %>
