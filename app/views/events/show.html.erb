@@ -27,10 +27,11 @@
         <p><%= @event.description %></p>
       </div>
       <br>
-      <div>
+
+      <div class="justify-content-center">
        <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
         <% if policy(Booking.new(event: @event)).create? && not_booked %>
-          <%= link_to "Join", event_bookings_path(@event), method: :post %>
+          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom"%>
         <% end %>
         <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
           <p><strong>You already booked this event!</strong></p>
