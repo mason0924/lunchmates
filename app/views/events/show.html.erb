@@ -10,7 +10,7 @@
         <p><%= @event.restaurant_address %></p>
         <br>
         <p> <strong>Happening at  <%= @event.date %> </strong></p>
-        <p><strong>Price range: </strong><%= @event.restaurant_price_range %></p>
+        <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
       </div>
 
       <div>
