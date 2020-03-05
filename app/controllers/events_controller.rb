@@ -6,6 +6,11 @@ class EventsController < ApplicationController
       # Search by the location
       @events = @events.near(params[:query], 10)
     end
+
+    if params[:lat].present? && params[:long].present?
+      @events = @events.near([params[:lat], params[:long]], 10)
+    end
+
     @geocoded_events = @events.geocoded #returns events with coordinates
     @markers = @geocoded_events.map do |event|
        {
