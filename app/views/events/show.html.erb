@@ -20,11 +20,11 @@
 
       <div>
         <p>Host: <strong> <%= @event.user.first_name %></p></strong>
-        <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill %>
+        <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
         <div class="d-flex">
           <p>Guests: <% Booking.joins(:event).where(event: @event).each do |booking|  %>
             <strong><%= booking.user.first_name %></strong>
-            <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill %>
+            <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
             <% end %></p>
         </div>
       </div>
