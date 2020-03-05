@@ -9,7 +9,7 @@
         <%= f.input :restaurant_name %>
         <%= f.input :restaurant_address %>
         <%= f.input :restaurant_price_range %>
-        <%= f.input :date %>
+        <%= f.input :date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :spots %>
         <%= f.button :submit, class: "btn btn-success" %>
     <% end %>
