@@ -22,7 +22,7 @@
 .card-custom {
   background: white;
   margin: 10px 0;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   font-weight: 700;
   .btn-custom {
@@ -30,6 +30,10 @@
     right: 25px;
     bottom: 20px;
   }
+}
+
+.card-custom:active {
+
 }
 
 .date {
