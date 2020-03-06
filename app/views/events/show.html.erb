@@ -12,20 +12,12 @@
       </div>
         <h5><strong><%= @event.restaurant_name %></strong></h5>
         <p><%= @event.restaurant_address %></p>
-        <br>
-
-        <p> <strong>Happening on <%= @event.start_time.strftime("%e %b %Y") %> </strong></p>
-        <p> <strong>From  <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%> </strong></p>
-        
-        <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
-      </div>
-
-      <div>
+        <br>        <p> <strong>Happening on <%= @event.start_time.strftime("%e %b %Y") %> </strong></p>
+        <p> <strong>From  <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%> </strong></p>        <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
+      </div>      <div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
         <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
-        <br>
-
-        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
+        <br>        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
         <div class="d-flex">
            <% Booking.joins(:event).where(event: @event).each do |booking|  %>
             <div>
@@ -35,28 +27,18 @@
             <% end %>
         </div>
       </div>
-      <br>
-
-      <div>
+      <br>      <div>
         <p><%= @event.description %></p>
       </div>
-      <br>
-
-      <div>
+      <br>      <div>
          <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
           <% if policy(Booking.new(event: @event)).create? && not_booked %>
             <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
-         <% end %>
-
-        <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
+         <% end %>        <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
           <p><strong>You already booked this event!</strong></p>
-        <% end %>
-
-        <% if policy(@event).edit? %>
+        <% end %>        <% if policy(@event).edit? %>
           <%= link_to "Edit", edit_event_path(@event), class: "btn btn-success" %>
-        <% end %>
-
-        <% if policy(@event).destroy? %>
+        <% end %>        <% if policy(@event).destroy? %>
           <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %>
         <% end %>
       </div>
