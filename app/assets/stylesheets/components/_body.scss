@@ -1,9 +1,17 @@
 body {
-  background: 
-  linear-gradient(to bottom, #617E84, #ECB29E) 
+  background:
+  linear-gradient(to bottom, #617E84, #ECB29E)
     no-repeat bottom;
 	background-size: 100% 100%;
   font-family: 'Karla';
   min-height: 100vh;
+  position: relative;
+  display: block;
+  height: 1000px;
+  overflow-y: scroll;
+
 }
 
+h5 {
+  font-family: 'Rubik', 700;
+}

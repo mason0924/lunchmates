@@ -28,3 +28,26 @@
   <%= link_to 'Back', events_path, class: "btn btn-primary" %>
 </div>
 
+
+
+////////
+
+<body>
+  <div class="container">
+    <div class="row">
+      <% @events.each do |event| %>
+        <div class="col-12 col-sm-6 col-md-3">
+          <div class="card-custom">
+              <div class="name">
+                <button type="button" class="btn btn-custom"><%= link_to event.restaurant_name, event_path(event) %></button>
+                <p><%= event.description %></p>
+              </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</body>
+
+
+

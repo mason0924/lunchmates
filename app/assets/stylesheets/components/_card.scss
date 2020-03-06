@@ -1,3 +1,24 @@
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.fill img {
+    border-radius: 5px 0px 0px 5px;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.cards {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+}
 .card-custom {
   background: white;
   margin: 10px 0;
@@ -11,13 +32,26 @@
   }
 }
 
-
-
+.date {
+  color: #b7b7b7;
+}
 .lockup {
   padding: 10px;
+  text-decoration: none;
   flex-grow: 1;
+  h5 {
+    margin-bottom: 0;
+    color: #092e52;
+  }
+  p {
+    margin-bottom: 0;
+    opacity: .6;
+   }
 }
 
 h5 {
+  font-family: 'Rubik';
   font-weight: 700;
 }
+
+
