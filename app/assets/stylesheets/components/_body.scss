@@ -1,16 +1,14 @@
 body {
-  background-color: #FFF0ED;
-	background-size: 100% 100%;
-  font-family: 'Karla';
+  background: linear-gradient(white, #FFBBAA);
   min-height: 100vh;
+  font-family: 'Karla';
   position: relative;
   display: block;
-  height: 1000px;
   overflow-y: scroll;
 }
 
 
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Rubik', 700;
+  font-family: 'Rubik';
 }
