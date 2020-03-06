@@ -19,13 +19,19 @@
       </div>
 
       <div>
-        <p>Host: <strong> <%= @event.user.first_name %></p></strong>
-        <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill %>
+        <p class="mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
+        <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+        <br>
+        <br>
+
+        <p class="mb-1"><strong>Guests: </strong></p>
         <div class="d-flex">
-          <p>Guests: <% Booking.joins(:event).where(event: @event).each do |booking|  %>
-            <strong><%= booking.user.first_name %></strong>
-            <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill %>
-            <% end %></p>
+           <% Booking.joins(:event).where(event: @event).each do |booking|  %>
+            <div>
+              <p class="mb-0"><%= booking.user.first_name %></p>
+              <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+            </div>
+            <% end %>
         </div>
       </div>
       <br>
