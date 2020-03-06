@@ -114,7 +114,7 @@ puts 'Creating Bookings'
 booking_1 = Booking.create!( event: event_1, user: user_16 ) #pasta
 booking_2 = Booking.create!( event: event_1, user: user_6 )
 
-booking_4 = Booking.create!( event: event_2, user: user_4 ) #KFC
+# booking_4 = Booking.create!( event: event_2, user: user_4 ) #KFC
 
 booking_5 = Booking.create!( event: event_3, user: user_1 ) #ishin
 booking_6 = Booking.create!( event: event_3, user: user_2 )
