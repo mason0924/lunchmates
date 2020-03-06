@@ -1,53 +1,53 @@
-<h1>Dashboard</h1>
-<br>
-<br>
-<br>
-<br>
-<h2>Hosting (Events)</h2>
-
 <div class="container">
-    <% @events.each do |event| %>
-        <div class="col-12 col-sm-6 col-md-3">
-          <%= link_to event.event_name, event_path(event), class: "btn btn-info"  %>
-          <p><%= event.restaurant_name %></p>
-        </div>
-    <% end %>
-</div>
-
-
-<h2>Joining (Bookings)</h2>
-
-<div class="container mt-5">
-  <% @bookings.each do |booking| %>
-    <strong> <%= booking.event.event_name %> </strong>
-    <%= booking.event.description %>
-    <div class="col-3 border-left">
-      <%= link_to "Unjoin", booking_path(booking), method: :delete %>
-    </div>
-  <% end %>
-  <%= link_to 'Back', events_path, class: "btn btn-primary" %>
-</div>
-
-
-
-////////
-
-<body>
-  <div class="container">
-    <div class="row">
+  <div class="row">
+    <div class="cards col-12">
       <% @events.each do |event| %>
-        <div class="col-12 col-sm-6 col-md-3">
-          <div class="card-custom">
-              <div class="name">
-                <button type="button" class="btn btn-custom"><%= link_to event.restaurant_name, event_path(event) %></button>
-                <p><%= event.description %></p>
-              </div>
+        <%= link_to event_path(event) do  %>
+          <div class="card-custom d-flex">
+            <div class="fill">
+              <% if event.photos %>
+                <% event.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="lockup">
+              <h5><%= event.event_name %></h5>
+              <p> At <%= event.restaurant_name %></p>
+              <p class="date"> At <%= event.date.strftime("%A, %b %d") %></p>
+           </div>
           </div>
-        </div>
+        <% end %>
       <% end %>
     </div>
   </div>
-</body>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="cards col-12">
+      <% @bookings.each do |booking| %>
+        <%= link_to booking_path(booking) do  %>
+          <div class="card-custom d-flex">
+            <div class="fill">
+               <% if booking.event.photos %>
+                <% booking.event.photos.each do |photo| %>
+                  <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="lockup">
+              <h5><%= booking.event.event_name %></h5>
+              <%= link_to "Confirm", booking_path(booking) %>
+           </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
 
 
 
