@@ -7,6 +7,7 @@
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  background-color: #617E84;
 }
 
 .navbar-lewagon .navbar-brand img {
@@ -18,12 +19,22 @@
   margin-top: 80px;
 }
 
+
 .dropdown-menu-right {
   right: 0;
   left: auto;
   background-color:red;
 }
 
-.dropdown-color ul li {
-  background-color: red;
+
+.nav-item.dropdown {
+  margin: 5px auto;
+  border-radius: 5px;
+  background-color: #617E84;
+}
+
+.navbar-nav.mr-auto {
+  padding-left: 15px;
+  color: white;
+  border-radius: 5px;
 }
