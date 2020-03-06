@@ -25,6 +25,9 @@
       </div>
 
       <div>
+        <br>      <div>
+        <p><%= @event.description %></p>
+      </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
         <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
         <br>        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
@@ -37,9 +40,7 @@
             <% end %>
         </div>
       </div>
-      <br>      <div>
-        <p><%= @event.description %></p>
-      </div>
+
       <br>      <div>
          <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
           <% if policy(Booking.new(event: @event)).create? && not_booked %>
