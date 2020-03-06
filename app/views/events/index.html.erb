@@ -5,10 +5,7 @@
       <%= link_to event_path(event) do  %>
           <div class="card-custom d-flex">
             <div class="fill">
-              <% event.photos.each do |photo| %>
-                 <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                 <!-- find a way to cover without stretching images -->
-              <% end %>
+                 <%= cl_image_tag event.photos.first.key, width: 100, heght: 100, crop: :fill %>
             </div>
             <!-- <img width="120" src="<%= image_path("logo.png") %>" alt="#"> -->
             <div class="lockup">
