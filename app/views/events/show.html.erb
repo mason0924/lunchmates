@@ -5,7 +5,7 @@
         <br>
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
-        <div class="image-gallery mb-4 mt-2" style="height: 215px; overflow: auto; white-space: nowrap;">
+        <div class="image-gallery mb-4 mt-2 rounded-sm" style="height: 215px; overflow: auto; white-space: nowrap;">
           <% @event.photos.each do |photo| %>
             <%= cl_image_tag photo.key, width: 370, crop: :fill %>
           <% end %>
