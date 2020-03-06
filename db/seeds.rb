@@ -43,19 +43,19 @@ user_20 = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gma
 
 puts 'Creating Events'
 # Event
-event_1 = Event.create!( event_name: "Pasta time!", description: "My office is a block away from Vapiano. And I love pasta. Do you? 🍝" ,user: user_11, restaurant_name: "Vapiano", restaurant_address: "Friedrichstraße 50-55, 10117 Berlin", restaurant_price_range: 2, date:Time.parse("Mar 6 2020 18:30"), spots: 4 )
-event_2 = Event.create!( event_name: "KFC lovers", description: "I love fried chickens! Finger LIckin' Good👅",  user: user_12, restaurant_name: "KFC", restaurant_address: "Friedrichstraße 45, 10969 Berlin", restaurant_price_range: 1, date: Time.parse("Mar 6 2020 18:19"), spots: 4 )
-event_3 = Event.create!( event_name: "Ishin lovers🍣", description: "Their service is kind of rude but maybe because I was alone...Would you join me?" ,user: user_3, restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1, date: Time.parse("Mar 6 2020 19:00"), spots: 4 )
-event_4 = Event.create!( event_name: "Syrian sandwich", description: "Hi, I'm new in Berlin and looking for friends. This Syrian place is pretty authentic. Please join me if you are interested. Thanks." ,user: user_19, restaurant_name: " Yorak ", restaurant_address: " Wilhelmstraße 41A, 10963 Berlin ", restaurant_price_range: 1, date: Time.parse("Mar 6 2020 17:30"), spots: 3 )
-event_5 = Event.create!( event_name: "Spicy noodles🍜", description: "I love spicy soup noodles!" ,user: user_5, restaurant_name: "Liu Noodles House ", restaurant_address: "Kronenstraße 72, 10117 Berlin", restaurant_price_range: 2, date: Time.parse("Mar 6 2020 13:00"), spots: 5 )
-event_6 = Event.create!( event_name: "Johny's chip in", description: "let's go to Jony's" ,user: user_8, restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, date: Time.parse("Mar 6 2020 18:00"), spots: 3 )
-event_7 = Event.create!( event_name: "Bocca di Bacco fans", description: "Meet me at Bocca di Bacco" ,user: user_9, restaurant_name: " Bocca di Bacco ", restaurant_address: " Friedrichstraße 167-168, 10117 Berlin", restaurant_price_range: 2, date: Time.parse("Mar 6 2020 18:15"), spots: 5 )
-event_8 = Event.create!( event_name: "QIU Restaurant lovers", description: "let's meet up at QIU - Bar & Restaurant" ,user: user_10, restaurant_name: " QIU - Bar & Restaurant", restaurant_address: " Potsdamer Straße 3, 10785 Berlin ", restaurant_price_range: 2, date:Time.parse("Mar 6 2020 20:30"), spots: 4 )
-event_9 = Event.create!( event_name: "Salad and chat", description: "I have an hour for lunch break, would be nice if someone can join me :-)" ,user: user_11, restaurant_name: "Little Green Rabbit", restaurant_address: "Friedrichstraße 200, 10117 Berlin", restaurant_price_range: 2, date:Time.parse("Mar 6 2020 12:30"), spots: 4 )
-event_10 = Event.create!( event_name: "Maximilians lovers", description: "It's very touristy and fun. Beers are amazing!", user: user_1, restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3, date: Time.parse("Mar 6 2020 17:19"), spots: 5 )
-event_11 = Event.create!( event_name: "Exchange student from India 🍛", description: "Hi my name is Raja. I'm an exchange student from India and new in Berlin. I usually come here to have lunch during the lunch time. I can help translating the menu! :)", user: user_8, restaurant_name: " Delhi 6 ", restaurant_address: "Friedrichstraße 237, 10969 Berlin", restaurant_price_range: 1, date: Time.parse("Mar 6 2020 12:30"), spots: 5 )
-event_12 = Event.create!( event_name: "Business lunch💼", description: "On a business trip in Berlin. Join me if you are interested to have a quick lunch", user: user_8, restaurant_name: "SOLAR Bar Restaurant Lounge", restaurant_address: "Stresemannstraße 76, 10963 Berlin", restaurant_price_range: 5, date: Time.parse("Mar 6 2020 12:30"), spots: 5 )
-event_13 = Event.create!( event_name: "I'm lovin🍟 ", description: "I love McNuggets. No judgement!" ,user: user_8, restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, date: Time.parse("Mar 6 2020 18:00"), spots: 3 )
+event_1 = Event.create!( user: user_13, event_name: "Pasta time!", description: "My office is a block away from Vapiano. And I love pasta. Do you? 🍝",  restaurant_name: "Vapiano", restaurant_address: "Friedrichstraße 50-55, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00") , spots: 4 )
+event_2 = Event.create!( user: user_12, event_name: "KFC lovers", description: "I love fried chickens! Finger LIckin' Good👅",   restaurant_name: "KFC", restaurant_address: "Friedrichstraße 45, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00"), spots: 4 )
+event_3 = Event.create!( user: user_3, event_name: "Ishin lovers🍣", description: "Their service is kind of rude but maybe because I was alone...Would you join me?" , restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 13:00"), end_time: DateTime.parse("06/03/2020 13:30"), spots: 4 )
+event_4 = Event.create!( user: user_8, event_name: "I'm lovin🍟 ", description: "I love McNuggets. No judgement!" , restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 3 )
+event_5 = Event.create!( user: user_19, event_name: "Syrian sandwich", description: "Hi, I'm new in Berlin and looking for friends. This Syrian place is pretty authentic. Please join me if you are interested. Thanks." , restaurant_name: " Yorak ", restaurant_address: " Wilhelmstraße 41A, 10963 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 14:45"), spots: 5 )
+event_6 = Event.create!( user: user_5, event_name: "Spicy noodles🍜", description: "I love spicy soup noodles!" , restaurant_name: "Liu Noodles House ", restaurant_address: "Kronenstraße 72, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 5 )
+event_7 = Event.create!( user: user_8, event_name: "Johny's chip in", description: "let's go to Jony's" , restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:30"), spots: 3 )
+event_8 = Event.create!( user: user_9, event_name: "Bocca di Bacco fans", description: "Meet me at Bocca di Bacco" , restaurant_name: " Bocca di Bacco ", restaurant_address: " Friedrichstraße 167-168, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 15:45"), spots: 5 )
+event_9 = Event.create!( user: user_10, event_name: "QIU Restaurant lovers", description: "let's meet up at QIU - Bar & Restaurant" , restaurant_name: " QIU - Bar & Restaurant", restaurant_address: " Potsdamer Straße 3, 10785 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:00"), spots: 4 )
+event_10 = Event.create!( user: user_11, event_name: "Salad and chat", description: "I have an hour for lunch break, would be nice if someone can join me :-)" , restaurant_name: "Little Green Rabbit", restaurant_address: "Friedrichstraße 200, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:30"), spots: 4 )
+event_11 = Event.create!( user: user_1, event_name: "Maximilians lovers", description: "It's very touristy and fun. Beers are amazing!",  restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 5 )
+event_12 = Event.create!( user: user_8, event_name: "Exchange student from India 🍛", description: "Hi my name is Raja. I'm an exchange student from India and new in Berlin. I usually come here to have lunch during the lunch time. I can help translating the menu! :)",  restaurant_name: " Delhi 6 ", restaurant_address: "Friedrichstraße 237, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 17:00"), end_time: DateTime.parse("06/03/2020 17:30"), spots: 5 )
+event_13 = Event.create!( user: user_8, event_name: "Business lunch💼", description: "On a business trip in Berlin. Join me if you are interested to have a quick lunch",  restaurant_name: "SOLAR Bar Restaurant Lounge", restaurant_address: "Stresemannstraße 76, 10963 Berlin", restaurant_price_range: 5, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 2 )
 
 events = [event_1, event_2, event_3, event_4, event_5, event_6, event_7, event_8, event_9, event_10, event_11, event_12, event_13]
 images_events = [
@@ -81,13 +81,13 @@ end
 
 puts 'Creating Bookings'
 # Booking
-booking_1 = Booking.create!( user: user_1, event: event_4 )
-booking_2 = Booking.create!( user: user_2, event: event_3 )
-booking_3 = Booking.create!( user: user_3, event: event_2 )
-booking_4 = Booking.create!( user: user_4, event: event_1 )
-booking_5 = Booking.create!( user: user_5, event: event_5 )
-booking_2 = Booking.create!( user: user_6, event: event_6 )
-booking_1 = Booking.create!( user: user_9, event: event_8 )
+booking_1 = Booking.create!( event: event_1, user: user_16 ) #pasta
+booking_2 = Booking.create!( event: event_1, user: user_1 )
+booking_3 = Booking.create!( event: event_1, user: user_2 )
+booking_4 = Booking.create!( event: event_3, user: user_4 ) #KFC
+booking_5 = Booking.create!( event: event_3, user: user_5 )
+booking_6 = Booking.create!( event: event_3, user: user_6 )
+booking_7 = Booking.create!( event: event_3, user: user_9 )
 
 users = [user_1, user_2, user_3, user_4, user_5, user_6, user_7, user_8, user_9, user_10, user_11, user_12, user_13, user_14, user_15, user_16, user_17, user_18, user_19, user_20]
 
