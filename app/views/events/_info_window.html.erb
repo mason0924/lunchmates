@@ -1,7 +1,7 @@
 
-<div class="image-gallery" style="height: 215px; overflow: auto; white-space: nowrap;">
+<div class="image-gallery">
   <% event.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, width: 200, crop: :fill %>
+    <%= cl_image_tag photo.key, height: 200, crop: :fill %>
   <% end %>
 </div>
 
