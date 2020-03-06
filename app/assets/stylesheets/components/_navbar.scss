@@ -18,8 +18,12 @@
   margin-top: 80px;
 }
 
-.navbar-nav {
+.dropdown-menu-right {
   right: 0;
   left: auto;
+  background-color:red;
+}
 
+.dropdown-color ul li {
+  background-color: red;
 }
