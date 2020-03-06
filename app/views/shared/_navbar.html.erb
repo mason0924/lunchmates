@@ -1,6 +1,6 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
-    <%= image_tag "lunchmates-logo-sq.png" %>
+    <%= image_tag "lunchmates-logo-05.png" %>
     <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,9 +17,13 @@
         <li class="nav-item">
           <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
         </li>
+
+        <li>
+          <%= link_to "Create", new_event_path, class: "nav-link" %>
+        </li>
+
         <li class="nav-item dropdown">
-          <!-- image not working -->
-          <%= image_tag "https://res.cloudinary.com/di9muho2v/image/upload/v1583166132/cartman_ox73ft.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <%= cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
             <%= link_to "Action", "#", class: "dropdown-item" %>
             <%= link_to "Another action", "#", class: "dropdown-item" %>
