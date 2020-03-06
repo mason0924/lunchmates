@@ -1,17 +1,25 @@
 <div class="container">
   <div class="row">
+        <div class="cards col-12">
     <% @events.each do |event| %>
-        <div class="col-12 col-sm-6 col-md-3">
+      <%= link_to event_path(event) do  %>
           <div class="card-custom d-flex">
-            <img width="120" src="<%= image_path("logo.png") %>" alt="#">
+            <div class="fill">
+              <% event.photos.each do |photo| %>
+                 <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
+                 <!-- find a way to cover without stretching images -->
+              <% end %>
+            </div>
+            <!-- <img width="120" src="<%= image_path("logo.png") %>" alt="#"> -->
             <div class="lockup">
               <h5><%= event.event_name %></h5>
               <p> At <%= event.restaurant_name %></p>
-             <%= link_to "Details", event_path(event), class: "btn btn-custom"  %>
+              <p class="date"> At <%= event.date.strftime("%A, %b %d") %></p>
            </div>
           </div>
-        </div>
+      <% end %>
     <% end %>
+        </div>
   </div>
 <div
       id="map"
