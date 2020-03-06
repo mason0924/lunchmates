@@ -5,12 +5,11 @@
         <br>
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
-        <div class="image-gallery" style="height: 215px; overflow: auto; white-space: nowrap;">
+        <div class="image-gallery mb-4 mt-2" style="height: 215px; overflow: auto; white-space: nowrap;">
           <% @event.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, width: 200, crop: :fill %>
+            <%= cl_image_tag photo.key, width: 370, crop: :fill %>
           <% end %>
-        </div>
-        <br>
+      </div>
         <h5><strong><%= @event.restaurant_name %></strong></h5>
         <p><%= @event.restaurant_address %></p>
         <br>
@@ -19,12 +18,11 @@
       </div>
 
       <div>
-        <p class="mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
+        <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
         <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
         <br>
-        <br>
 
-        <p class="mb-1"><strong>Guests: </strong></p>
+        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
         <div class="d-flex">
            <% Booking.joins(:event).where(event: @event).each do |booking|  %>
             <div>
@@ -42,10 +40,10 @@
       <br>
 
       <div>
-       <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
-        <% if policy(Booking.new(event: @event)).create? && not_booked %>
-          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom"%>
-        <% end %>
+         <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
+          <% if policy(Booking.new(event: @event)).create? && not_booked %>
+            <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
+         <% end %>
 
         <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
           <p><strong>You already booked this event!</strong></p>
