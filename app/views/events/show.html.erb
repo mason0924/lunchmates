@@ -1,11 +1,11 @@
 <div class="container ">
   <div class="row my-5">
     <div class="col-12">
-        <%= link_to "Back", events_path(@event), class: "btn btn-primary" %>
+        <%= link_to '<i class="fas fa-chevron-left"></i>'.html_safe, events_path(@event), class: "back-button"%>
         <br>
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
-        <div class="image-gallery mb-4 mt-2" style="height: 215px; overflow: auto; white-space: nowrap;">
+        <div class="image-gallery mb-4 mt-2 rounded-sm" style="height: 215px; overflow: auto; white-space: nowrap;">
           <% @event.photos.each do |photo| %>
             <%= cl_image_tag photo.key, width: 370, crop: :fill %>
           <% end %>
@@ -13,7 +13,10 @@
         <h5><strong><%= @event.restaurant_name %></strong></h5>
         <p><%= @event.restaurant_address %></p>
         <br>
-        <p> <strong>Happening at  <%= @event.date %> </strong></p>
+
+        <p> <strong>Happening on  <%= @event.start_time.strftime("%e %b %Y") %> </strong></p>
+        <p> <strong>From  <%= @event.start_time.strftime("%H:%M:%S")%> to <%=@event.end_time.strftime("%H:%M:%S")%> </strong></p>
+        
         <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
       </div>
 
