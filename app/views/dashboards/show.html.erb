@@ -1,6 +1,8 @@
-<div class="container">
-  <div class="row">
+<div class="container pt-4">
+  <h1>Dashboard</h1>
+  <div class="row pt-4">
     <div class="cards col-12">
+      <h3>Hosting</h3>
       <% @events.each do |event| %>
         <%= link_to event_path(event) do  %>
           <div class="card-custom d-flex">
@@ -26,6 +28,7 @@
 <div class="container">
   <div class="row">
     <div class="cards col-12">
+      <h3>Joining</h3>
       <% @bookings.each do |booking| %>
         <%= link_to event_path(booking.event) do  %>
           <div class="card-custom d-flex">
@@ -38,6 +41,8 @@
             </div>
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
+              <p> At <%= booking.event.restaurant_name %></p>
+              <p class="date"> At <%= booking.event.start_time.strftime("%A, %b %d") %></p>
            </div>
           </div>
         <% end %>
@@ -45,6 +50,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 
