@@ -1,4 +1,9 @@
 .image-gallery {
   overflow: auto;
   white-space: nowrap;
+  border-radius: 5px;
+}
+
+.mapboxgl-popup-content{
+  box-shadow: 4px 3px 12px 0px rgba(0,0,0,0.36);
 }
