@@ -18,45 +18,46 @@ User.destroy_all
 
 puts 'Creating Users'
 # User
-user_1 = User.create!( first_name: "Azadeh", last_name: "Aram", email:"azadeh@gmail.com", password: "123456" )
-user_2 = User.create!( first_name: "Mana", last_name: "Jalili", email:"mana@gmail.com", password: "123456" )
-user_3 = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@gmail.com", password: "123456" )
-user_4 = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456" )
-user_5 = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456" )
-user_6 = User.create!( first_name: "Emma", last_name: "Cole", email:"ebony@gmail.com", password: "123456" )
-user_7 = User.create!( first_name: "Reyrey", last_name: "King", email:"riri@gmail.com", password: "123456" )
-user_8 = User.create!( first_name: "Raja", last_name: "Kash", email:"raja@gmail.com", password: "123456" )
-user_9 = User.create!( first_name: "Tako", last_name: "Hiroki", email:"tako@gmail.com", password: "123456" )
-user_10 = User.create!( first_name: "Sam", last_name: "Smith", email:"sam@gmail.com", password: "123456" )
-user_11 = User.create!( first_name: "Katy", last_name: "Perry", email:"katy@gmail.com", password: "123456" )
-user_12 = User.create!( first_name: "Ronald", last_name: "Donald", email:"ronald@gmail.com", password: "123456" )
-user_13 = User.create!( first_name: "Eva", last_name: "Vida", email:"eva@gmail.com", password: "123456" )
-user_14 = User.create!( first_name: "Kenny", last_name: "Manny", email:"kenny@gmail.com", password: "123456" )
-user_15 = User.create!( first_name: "Rahim", last_name: "Mat", email:"rahim@gmail.com", password: "123456" )
-user_16 = User.create!( first_name: "Fernado", last_name: "Cruz", email:"fernado@gmail.com", password: "123456" )
-user_17 = User.create!( first_name: "Maria", last_name: "Rose", email:"maria@gmail.com", password: "123456" )
-user_18 = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatimah@gmail.com", password: "123456" )
-user_19 = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456" )
-user_20 = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456" )
+azadeh = User.create!( first_name: "Azadeh", last_name: "Aram", email:"azadeh@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+mana = User.create!( first_name: "Mana", last_name: "Jalili", email:"mana@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+mattia = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+caro = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+emma = User.create!( first_name: "Emma", last_name: "Cole", email:"ebony@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+jennifer = User.create!( first_name: "Jennifer", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+raja = User.create!( first_name: "Raja", last_name: "Kash", email:"raja@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+tako = User.create!( first_name: "Tako", last_name: "Hiroki", email:"tako@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+sam = User.create!( first_name: "Sam", last_name: "Smith", email:"sam@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+katy = User.create!( first_name: "Katy", last_name: "Perry", email:"katy@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+ronald = User.create!( first_name: "Ronald", last_name: "Donald", email:"ronald@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+eva = User.create!( first_name: "Eva", last_name: "Vida", email:"eva@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+kenny = User.create!( first_name: "Kenny", last_name: "Manny", email:"kenny@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+rahim = User.create!( first_name: "Rahim", last_name: "Mat", email:"rahim@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+fernando = User.create!( first_name: "Fernando", last_name: "Cruz", email:"fernando@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+maria = User.create!( first_name: "Maria", last_name: "Rose", email:"maria@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatimah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 
 
 
 puts 'Creating Events'
 # Event
-event_1 = Event.create!( user: user_13, event_name: "Pasta time!", description: "My office is a block away from Vapiano. And I love pasta. Do you? 🍝",  restaurant_name: "Vapiano", restaurant_address: "Friedrichstraße 50-55, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00") , spots: 4 )
-event_2 = Event.create!( user: user_12, event_name: "KFC lovers", description: "I love fried chickens! Finger LIckin' Good👅",   restaurant_name: "KFC", restaurant_address: "Friedrichstraße 45, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00"), spots: 4 )
-event_3 = Event.create!( user: user_9, event_name: "Ishin lovers🍣", description: "Their service is kind of rude but maybe because I was alone...Would you join me?" , restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 13:00"), end_time: DateTime.parse("06/03/2020 13:30"), spots: 4 )
-event_4 = Event.create!( user: user_19, event_name: "Syrian sandwich", description: "Hi, I'm new in Berlin and looking for friends. This Syrian place is pretty authentic. Please join me if you are interested. Thanks." , restaurant_name: " Yorak ", restaurant_address: " Wilhelmstraße 41A, 10963 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 14:45"), spots: 5 )
-event_5 = Event.create!( user: user_5, event_name: "Spicy noodles🍜", description: "I love spicy soup noodles!" , restaurant_name: "Liu Noodles House ", restaurant_address: "Kronenstraße 72, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 5 )
-event_6 = Event.create!( user: user_7, event_name: "Johny's chip in", description: "let's go to Jony's" , restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:30"), spots: 3 )
-event_7 = Event.create!( user: user_6, event_name: "Bocca di Bacco fans", description: "Meet me at Bocca di Bacco" , restaurant_name: " Bocca di Bacco ", restaurant_address: " Friedrichstraße 167-168, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 15:45"), spots: 5 )
-event_8 = Event.create!( user: user_2, event_name: "QIU Restaurant lovers", description: "let's meet up at QIU - Bar & Restaurant" , restaurant_name: " QIU - Bar & Restaurant", restaurant_address: " Potsdamer Straße 3, 10785 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:00"), spots: 4 )
-event_9 = Event.create!( user: user_11, event_name: "Salad and chat", description: "I have an hour for lunch break, would be nice if someone can join me :-)" , restaurant_name: "Little Green Rabbit", restaurant_address: "Friedrichstraße 200, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:30"), spots: 4 )
-event_10 = Event.create!( user: user_20, event_name: "Maximilians lovers", description: "It's very touristy and fun. Beers are amazing!",  restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 5 )
-event_11 = Event.create!( user: user_8, event_name: "Exchange student from India 🍛", description: "Hi my name is Raja. I'm an exchange student from India and new in Berlin. I usually come here to have lunch during the lunch time. I can help translating the menu! :)",  restaurant_name: " Delhi 6 ", restaurant_address: "Friedrichstraße 237, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 17:00"), end_time: DateTime.parse("06/03/2020 17:30"), spots: 5 )
-event_12 = Event.create!( user: user_14, event_name: "Business lunch💼", description: "On a business trip in Berlin. Join me if you are interested to have a quick lunch",  restaurant_name: "SOLAR Bar Restaurant Lounge", restaurant_address: "Stresemannstraße 76, 10963 Berlin", restaurant_price_range: 5, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 2 )
-event_13 = Event.create!( user: user_16, event_name: "I'm lovin🍟 ", description: "I love McNuggets. No judgement!" , restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 3 )
+event_1 = Event.create!( user: eva, event_name: "Pasta time!", description: "My office is a block away from Vapiano. And I love pasta. Do you? 🍝",  restaurant_name: "Vapiano", restaurant_address: "Friedrichstraße 50-55, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00") , spots: 4 )
+event_2 = Event.create!( user: ronald, event_name: "KFC lovers", description: "I love fried chickens! Finger LIckin' Good👅",   restaurant_name: "KFC", restaurant_address: "Friedrichstraße 45, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 12:00"), end_time: DateTime.parse("06/03/2020 13:00"), spots: 4 )
+event_3 = Event.create!( user: tako, event_name: "Ishin lovers🍣", description: "Their service is kind of rude but maybe because I was alone...Would you join me?" , restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 13:00"), end_time: DateTime.parse("06/03/2020 13:30"), spots: 4 )
+event_4 = Event.create!( user: rosmah, event_name: "Syrian sandwich", description: "Hi, I'm new in Berlin and looking for friends. This Syrian place is pretty authentic. Please join me if you are interested. Thanks." , restaurant_name: " Yorak ", restaurant_address: " Wilhelmstraße 41A, 10963 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 14:45"), spots: 5 )
+event_5 = Event.create!( user: caro, event_name: "Spicy noodles🍜", description: "I love spicy soup noodles!" , restaurant_name: "Liu Noodles House ", restaurant_address: "Kronenstraße 72, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 5 )
+event_6 = Event.create!( user: jennifer, event_name: "Johny's chip in", description: "let's go to Jony's" , restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:30"), spots: 3 )
+event_7 = Event.create!( user: emma, event_name: "Bocca di Bacco fans", description: "Meet me at Bocca di Bacco" , restaurant_name: " Bocca di Bacco ", restaurant_address: " Friedrichstraße 167-168, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 15:45"), spots: 5 )
+event_8 = Event.create!( user: mana, event_name: "QIU Restaurant lovers", description: "let's meet up at QIU - Bar & Restaurant" , restaurant_name: " QIU - Bar & Restaurant", restaurant_address: " Potsdamer Straße 3, 10785 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:00"), spots: 4 )
+event_9 = Event.create!( user: katy, event_name: "Salad and chat", description: "I have an hour for lunch break, would be nice if someone can join me :-)" , restaurant_name: "Little Green Rabbit", restaurant_address: "Friedrichstraße 200, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:30"), spots: 4 )
+event_10 = Event.create!( user: juan, event_name: "Maximilians lovers", description: "It's very touristy and fun. Beers are amazing!",  restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 5 )
+event_11 = Event.create!( user: raja, event_name: "Exchange student from India 🍛", description: "Hi my name is Raja. I'm an exchange student from India and new in Berlin. I usually come here to have lunch during the lunch time. I can help translating the menu! :)",  restaurant_name: " Delhi 6 ", restaurant_address: "Friedrichstraße 237, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 17:00"), end_time: DateTime.parse("06/03/2020 17:30"), spots: 5 )
+event_12 = Event.create!( user: kenny, event_name: "Business lunch💼", description: "On a business trip in Berlin. Join me if you are interested to have a quick lunch",  restaurant_name: "SOLAR Bar Restaurant Lounge", restaurant_address: "Stresemannstraße 76, 10963 Berlin", restaurant_price_range: 5, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 2 )
+event_13 = Event.create!( user: fernando, event_name: "I'm lovin🍟 ", description: "I love McNuggets. No judgement!" , restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 3 )
 
+puts 'Creating events photos'
 events = [event_1, event_2, event_3, event_4, event_5, event_6, event_7, event_8, event_9, event_10, event_11, event_12, event_13]
 images_events = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583406312/Restaurant%20Picutres/Vapiano/vapiano-offers-a-range_gokd2a.jpg",
@@ -77,7 +78,7 @@ images_events.each_with_index do |image, index|
   file = URI.open(image)
   events[index].photos.attach(io: file, filename: 'restaurantpic.jpg', content_type: 'image/jpg')
 end
-
+puts 'Creating more events photos'
 event_1.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583406406/Restaurant%20Picutres/Vapiano/hcmp131298_447734_l1x2pc.jpg"), filename: 'restaurantpic2.jpg', content_type: 'image/jpg')
 event_1.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583406362/Restaurant%20Picutres/Vapiano/vapianocentre_oj8mw9.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
 event_1.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583406325/Restaurant%20Picutres/Vapiano/cover_image.jpg.640x360_q85_crop_hnezfx.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
@@ -111,50 +112,50 @@ event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image
 
 puts 'Creating Bookings'
 # Booking
-booking_1 = Booking.create!( event: event_1, user: user_16 ) #pasta
-booking_2 = Booking.create!( event: event_1, user: user_6 )
+booking_1 = Booking.create!( event: event_1, user: fernando ) #pasta
+booking_2 = Booking.create!( event: event_1, user: emma )
 
-# booking_4 = Booking.create!( event: event_2, user: user_4 ) #KFC
+# booking_4 = Booking.create!( event: event_2, user: mason ) #KFC
 
-booking_5 = Booking.create!( event: event_3, user: user_1 ) #ishin
-booking_6 = Booking.create!( event: event_3, user: user_2 )
-booking_7 = Booking.create!( event: event_3, user: user_3 )
+booking_5 = Booking.create!( event: event_3, user: azadeh) #ishin
+booking_6 = Booking.create!( event: event_3, user: mana)
+booking_7 = Booking.create!( event: event_3, user: mattia )
 
-booking_3 = Booking.create!( event: event_4, user: user_20 )
-booking_8 = Booking.create!( event: event_4, user: user_19 )#syrian
-booking_9 = Booking.create!( event: event_4, user: user_9 )
+booking_3 = Booking.create!( event: event_4, user: juan )
+booking_8 = Booking.create!( event: event_4, user: rosmah )#syrian
+booking_9 = Booking.create!( event: event_4, user: tako )
 
-booking_10 = Booking.create!( event: event_5, user: user_1 )#noodle
-booking_11 = Booking.create!( event: event_5, user: user_9 )
-# booking_12 = Booking.create!( event: event_5, user: user_9 )
+booking_10 = Booking.create!( event: event_5, user: azadeh)#noodle
+booking_11 = Booking.create!( event: event_5, user: tako )
+# booking_12 = Booking.create!( event: event_5, user: tako )
 
-booking_13 = Booking.create!( event: event_6, user: user_10 )#jonny
-booking_14 = Booking.create!( event: event_6, user: user_19 )
+booking_13 = Booking.create!( event: event_6, user: sam )#jonny
+booking_14 = Booking.create!( event: event_6, user: rosmah )
 
-booking_15 = Booking.create!( event: event_7, user: user_19 )#bocca
-booking_16 = Booking.create!( event: event_7, user: user_9 )
+booking_15 = Booking.create!( event: event_7, user: rosmah )#bocca
+booking_16 = Booking.create!( event: event_7, user: tako )
 
-booking_17 = Booking.create!( event: event_8, user: user_17 )#qiu
-booking_18 = Booking.create!( event: event_8, user: user_19 )
+booking_17 = Booking.create!( event: event_8, user: maria )#qiu
+booking_18 = Booking.create!( event: event_8, user: rosmah )
 
-booking_19 = Booking.create!( event: event_9, user: user_7 )#salad
-booking_20 = Booking.create!( event: event_9, user: user_9 )
+booking_19 = Booking.create!( event: event_9, user: jennifer )#salad
+booking_20 = Booking.create!( event: event_9, user: tako )
 
-booking_21 = Booking.create!( event: event_10, user: user_18 )#maxi
-booking_22 = Booking.create!( event: event_10, user: user_2 )
+booking_21 = Booking.create!( event: event_10, user: fatimah )#maxi
+booking_22 = Booking.create!( event: event_10, user: mana)
 
-booking_23 = Booking.create!( event: event_11, user: user_20 )#india
-booking_24 = Booking.create!( event: event_11, user: user_11 )
+booking_23 = Booking.create!( event: event_11, user: juan )#india
+booking_24 = Booking.create!( event: event_11, user: katy )
 
-booking_25 = Booking.create!( event: event_12, user: user_9 )#busine
-# booking_26 = Booking.create!( event: event_12, user: user_9 )
+booking_25 = Booking.create!( event: event_12, user: tako )#busine
+# booking_26 = Booking.create!( event: event_12, user: tako )
 
-booking_27 = Booking.create!( event: event_13, user: user_9 )#mcd
-# booking_28 = Booking.create!( event: event_13, user: user_9 )
+booking_27 = Booking.create!( event: event_13, user: tako )#mcd
+# booking_28 = Booking.create!( event: event_13, user: tako )
 
 
-
-users = [user_1, user_2, user_3, user_4, user_5, user_6, user_7, user_8, user_9, user_10, user_11, user_12, user_13, user_14, user_15, user_16, user_17, user_18, user_19, user_20]
+puts 'Creating users photos'
+users = [azadeh, mana, mattia, mason, caro, emma, jennifer, raja, tako, sam, katy, ronald, eva, kenny, rahim, fernando, maria, fatimah, rosmah, juan]
 
 images_user = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583406854/User%20Pictures/profilepic-A_lowotm.jpg",

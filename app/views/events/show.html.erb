@@ -29,14 +29,19 @@
         <p><%= @event.description %></p>
       </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
-        <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
-        <br>        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
+        <%= link_to user_path(@host) do %>
+          <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+        <% end %>
+        <br>
+        <p class="mb-0 mt-3"><strong>Guests: </strong></p>
         <div class="d-flex">
            <% Booking.joins(:event).where(event: @event).each do |booking|  %>
             <div>
               <p class="mb-0"><%= booking.user.first_name %></p>
-              <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
-            </div>
+                <%= link_to user_path(booking.user_id) do %>
+                  <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+                <% end %>
+              </div>
             <% end %>
         </div>
       </div>
