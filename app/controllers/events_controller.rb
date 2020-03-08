@@ -24,7 +24,9 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @host = @event.user_id
     authorize @event
+    # authorize @user
   end
 
   def new
