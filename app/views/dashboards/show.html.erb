@@ -3,16 +3,19 @@
   <div class="row pt-4">
     <div class="cards col-12">
       <h3>Hosting</h3>
-      <% @events.each do |event| %>
-        <%= link_to event_path(event) do  %>
-          <div class="card-custom d-flex">
-            <div class="fill">
-              <% if event.photos %>
-                <% event.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                <% end %>
-              <% end %>
-            </div>
+        <% if current_user.events.empty? %>
+        <p>You are not hosting any events!</p>
+        <% end %>
+          <% @events.each do |event| %>
+            <%= link_to event_path(event) do  %>
+              <div class="card-custom d-flex">
+                <div class="fill">
+                  <% if event.photos %>
+                    <% event.photos.each do |photo| %>
+                      <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
+                    <% end %>
+                  <% end %>
+                </div>
             <div class="lockup">
               <h5><%= event.event_name %></h5>
               <p> At <%= event.restaurant_name %></p>
@@ -29,6 +32,11 @@
   <div class="row">
     <div class="cards col-12">
       <h3>Joining</h3>
+
+        <% if current_user.bookings.empty? %>
+          <p>You don't have any upcoming bookings!</p>
+        <% end %>
+      
       <% @bookings.each do |booking| %>
         <%= link_to event_path(booking.event) do  %>
           <div class="card-custom d-flex">
@@ -36,6 +44,8 @@
               <% if booking.event.photos %>
                 <%= cl_image_tag booking.event.photos.first.key, width: 100, heght: 100, crop: :fill %>
               <% end %>
+      <% end %>
+
             </div>
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
