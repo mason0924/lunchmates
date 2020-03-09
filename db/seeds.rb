@@ -188,7 +188,7 @@ images_user = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408243/User%20Pictures/profilepic-13_z7faic.jpg",
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408244/User%20Pictures/profilepic-14_edcxc6.jpg",
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408245/User%20Pictures/profilepic-15_una5hf.jpg",
-  "https://res.cloudinary.com/lunchmates/image/upload/v1583772816/User%20Pictures/thomas_rpuo2y.jpg"
+  "https://res.cloudinary.com/lunchmates/image/upload/v1583778182/User%20Pictures/thomas-1_mjld0q.jpg"
 ]
 images_user.each_with_index do |image, index|
   file = URI.open(image)
