@@ -4,11 +4,12 @@
   <div class="homepage-form-wrapper">
     <link rel="stylesheet" href="css/style.css">
     <%= form_tag events_path, method: :get, class: "homepage-form justify-content-center " do %>
-      <%= text_field_tag :query,
+      <%= text_field_tag :location,
       params[:query],
       class: "form-control",
       placeholder: "Enter your address/ zipcode 📌"
     %>
+
   </div>
   <div class="row">
     <div class="col-12">

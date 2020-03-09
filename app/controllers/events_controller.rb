@@ -27,6 +27,7 @@ class EventsController < ApplicationController
     @host = @event.user_id
     authorize @event
     @message = Message.new
+    @booking = Booking.find_by(user: current_user, event: @event)
     # authorize @user
   end
 
