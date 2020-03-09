@@ -51,7 +51,7 @@
           <% if policy(Booking.new(event: @event)).create? && not_booked %>
             <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
          <% end %>        <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
-          <p><strong>You already booked this event!</strong></p>
+          <%= link_to "Unjoin", event_path(@event), method: :delete, class: "btn btn-custom btn btn-home"%>
         <% end %>        <% if policy(@event).edit? %>
           <%= link_to "Edit", edit_event_path(@event), class: "btn btn-success" %>
         <% end %>        <% if policy(@event).destroy? %>
