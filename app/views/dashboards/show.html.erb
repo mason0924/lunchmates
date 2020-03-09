@@ -11,9 +11,7 @@
               <div class="card-custom d-flex">
                 <div class="fill">
                   <% if event.photos %>
-                    <% event.photos.each do |photo| %>
-                      <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                    <% end %>
+                    <%= cl_image_tag event.photos.first.key, width: 100, heght: 100, crop: :fill %>
                   <% end %>
               </div>
 
