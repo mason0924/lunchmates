@@ -1,11 +1,19 @@
-<div class="position-relative back-btn">
-  <%= link_to "", request.referer.present? ? request.referer : default_path, class: "absolute-0-0"%>
-    <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
+<div class="container">
+  <div class="row">
+    <div class="col-12 my-4">
+
+<!--     <div class="position-relative back-btn">
+      <%= link_to "", request.referer.present? ? request.referer : default_path, class: "absolute-0-0"%>
+        <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
+      </div> -->
+
+    <div>
+     <%= cl_image_tag @user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+    </div>
+    <h1><%= @user.first_name %></h1>
+    <p><%= @user.profile %></p>
+
+    <p><%= @user.first_name %>'s lunch history</p>
+    </div>
   </div>
-
-<h1><%= @user.first_name %>'s profile</h1>
-<br>
-<%= cl_image_tag @user.photo.key%>
-<p><%= @user.profile %></p>
-
-<p><%= @user.first_name %>'s lunch history</p>
+</div>
