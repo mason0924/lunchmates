@@ -2,7 +2,7 @@ import places from 'places.js';
 
 const initAutocomplete = () => {
   const addressInputHome = document.getElementById('query');
-  const addressInputCreate = document.getElementById('event_restaurant_address');
+  const addressInputCreate = document.getElementById('location');
 
   if (addressInputHome ) {
     places({ container: addressInputHome });
