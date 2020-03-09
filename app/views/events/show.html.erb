@@ -47,14 +47,17 @@
       </div>
 
       <br>      <div>
-         <% not_booked = !(current_user.bookings.any?{ |booking| booking.event == @event }) %>
-          <% if policy(Booking.new(event: @event)).create? && not_booked %>
-            <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
-         <% end %>        <% if (current_user.bookings.any?{ |booking| booking.event == @event }) %>
-          <%= link_to "Unjoin", event_path(@event), method: :delete, class: "btn btn-custom btn btn-home"%>
-        <% end %>        <% if policy(@event).edit? %>
+        <% if @booking %>
+          <%= link_to "Unjoin", booking_path(@booking), method: :delete, class: "btn btn-custom btn btn-home"%>
+        <% elsif policy(Booking.new(event: @event)).create? %>
+          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
+        <% end %>
+
+        <% if policy(@event).edit? %>
           <%= link_to "Edit", edit_event_path(@event), class: "btn btn-success" %>
-        <% end %>        <% if policy(@event).destroy? %>
+        <% end %>
+        
+        <% if policy(@event).destroy? %>
           <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %>
         <% end %>
       </div>
@@ -63,7 +66,10 @@
   <div class="group-message">
     <% @event.messages.each do |message| %>
     <div>
-      <p class="message-writer"><%=  message.user.first_name%>: <%=  message.content%> <br class="message-time" >at <%= message.created_at.strftime("%e %b %Y %H:%M") %></br></p>
+      <p class="message-writer"><%=  message.user.first_name%>: <%=  message.content%> 
+        <br>
+        <span class="message-time">at <%= message.created_at.strftime("%e %b %Y %l:%M %P") %></span>
+      </p>
       
     </div>
     <% end %>
