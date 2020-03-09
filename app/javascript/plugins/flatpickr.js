@@ -7,5 +7,16 @@ function initFlatpickr() {
     flatpickr(".datepicker", {});
   }
 }
+  const timeOption = document.querySelector(".event_start_time")
+  if (timeOption) {
+    flatpickr(".event_start_time",
+      {
+          enableTime: true,
+          noCalendar: true,
+          dateFormat: "H:i",
+          time_24hr: true
+      }
+      )
+  }
 
 export { initFlatpickr }
