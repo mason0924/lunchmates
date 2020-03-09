@@ -1,19 +1,44 @@
-<div class="container">
-  <div class="row my-5">
-    <div class="col-12">
-  <div class="position-relative back-btn">
-    <%= link_to "", request.referer.present? ? request.referer : default_path, class: "absolute-0-0"%>
-      <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
-    </div>
-
-  <h1><%= @user.first_name %>'s profile</h1>
-  <br>
-  <div class="rounded-circle">
-   <%= cl_image_tag @user.photo.key%>
+<div class="position-relative back-btn">
+  <%= link_to "", request.referer.present? ? request.referer : default_path, class: "absolute-0-0"%>
+    <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
   </div>
-  <p><%= @user.profile %></p>
 
-  <p><%= @user.first_name %>'s lunch history</p>
+<h1><%= @user.first_name %>'s profile</h1>
+<br>
+<%= cl_image_tag @user.photo.key%>
+<p><%= @user.profile %></p>
+
+<p><%= @user.first_name %>'s lunch history</p>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <div id="chatroom" class="rounded">
+        <h1>CHAT-ROOM</h1>
+
+        <form action="#" id="comment-form">
+
+          <div class="form-group">
+            <label for="your-message">Your comment</label>
+            <textarea type="text" name="content" id="your-message" class="form-control" placeholder="Here is my message.."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="your-name">From</label>
+            <input type="text" name="content" id="your-name" class="form-control" placeholder="Bob">
+          </div>
+          <input type="submit" value="Send" class="btn btn-primary">
+        </form>
+
+        <div id="messages">
+          <ul class="list-unstyled">
+            <li>A sample message (posted <span class="date">10 minutes ago</span>) by John</li>
+          </ul>
+
+          <button class="btn btn-danger" id="refresh">Refresh Chat</button>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

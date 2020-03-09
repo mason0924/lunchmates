@@ -26,6 +26,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
     @host = @event.user_id
     authorize @event
+    @message = Message.new
     # authorize @user
   end
 
