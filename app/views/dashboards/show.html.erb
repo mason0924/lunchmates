@@ -3,16 +3,19 @@
   <div class="row pt-4">
     <div class="cards col-12">
       <h3>Hosting</h3>
-      <% @events.each do |event| %>
-        <%= link_to event_path(event) do  %>
-          <div class="card-custom d-flex">
-            <div class="fill">
-              <% if event.photos %>
-                <% event.photos.each do |photo| %>
-                  <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                <% end %>
-              <% end %>
-            </div>
+        <% if current_user.events.empty? %>
+        <p>You are not hosting any events at the moment!</p>
+        <% end %>
+          <% @events.each do |event| %>
+            <%= link_to event_path(event) do  %>
+              <div class="card-custom d-flex">
+                <div class="fill">
+                  <% if event.photos %>
+                    <% event.photos.each do |photo| %>
+                      <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
+                    <% end %>
+                  <% end %>
+                </div>
             <div class="lockup">
               <h5><%= event.event_name %></h5>
               <p> At <%= event.restaurant_name %></p>
