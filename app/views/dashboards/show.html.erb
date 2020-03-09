@@ -32,18 +32,20 @@
   <div class="row">
     <div class="cards col-12">
       <h3>Joining</h3>
+
         <% if current_user.bookings.empty? %>
           <p>You don't have any upcoming bookings!</p>
         <% end %>
-          <% @bookings.each do |booking| %>
-            <%= link_to event_path(booking.event) do  %>
-              <div class="card-custom d-flex">
-                <div class="fill">
-                   <% if booking.event.photos %>
-                    <% booking.event.photos.each do |photo| %>
-                      <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                    <% end %>
-                  <% end %>
+      
+      <% @bookings.each do |booking| %>
+        <%= link_to event_path(booking.event) do  %>
+          <div class="card-custom d-flex">
+            <div class="fill">
+              <% if booking.event.photos %>
+                <%= cl_image_tag booking.event.photos.first.key, width: 100, heght: 100, crop: :fill %>
+              <% end %>
+      <% end %>
+
             </div>
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
