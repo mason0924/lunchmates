@@ -11,16 +11,14 @@
               <div class="card-custom d-flex">
                 <div class="fill">
                   <% if event.photos %>
-                    <% event.photos.each do |photo| %>
-                      <%= cl_image_tag photo.key, width: 100, heght: 100, crop: :fill %>
-                    <% end %>
+                    <%= cl_image_tag event.photos.first.key, width: 100, heght: 100, crop: :fill %>
                   <% end %>
               </div>
 
             <div class="lockup">
               <h5><%= event.event_name %></h5>
               <p> At <%= event.restaurant_name %></p>
-              <p class="date"> At <%= event.start_time.strftime("%A, %b %d") %></p>
+            <p class="date"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
            </div>
           </div>
         <% end %>
@@ -52,7 +50,7 @@
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
               <p> At <%= booking.event.restaurant_name %></p>
-              <p class="date"> At <%= booking.event.start_time.strftime("%A, %b %d") %></p>
+            <p class="date"> At <%= booking.event.start_time.strftime("%e %b %Y %H:%M")%> - <%= booking.event.end_time.strftime("%H:%M")%> </p>
            </div>
           </div>
         <% end %>
