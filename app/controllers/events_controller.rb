@@ -2,9 +2,13 @@ class EventsController < ApplicationController
 
   def index
     @events = policy_scope(Event)
-    if params[:query].present?
+    if params[:location].present? && params[:cuisine].present?
       # Search by the location
-      @events = @events.near(params[:query], 10)
+      @events = @events.near(params[:location], 10).where(cuisine: params[:cuisine])
+    elsif params[:location].present?
+      @events = @events.near(params[:location], 10)
+    elsif params[:cuisine].present?
+      @events = @events.where(cuisine: params[:cuisine])
     end
 
     if params[:lat].present? && params[:long].present?
@@ -20,6 +24,8 @@ class EventsController < ApplicationController
         #  image_url: helpers.asset_url('icon_marker.png')
        }
      end
+
+
    end
 
   def show
