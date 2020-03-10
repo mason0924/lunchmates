@@ -1,38 +1,42 @@
 <div class="container">
   <div class="row">
     <div class="cards col-12" id="list">
-      <%= form_tag events_path, method: :get, class: "homepage-form justify-content-center " do %>
-      <label for="cuisine">Choose a cuisine:</label>
-      <select id="cuisine" name="cuisine">
-        <option value="Italian">Italian</option>
-        <option value="Fast food">Fast food</option>
-        <option value="Japanese">Japanese</option>
-        <option value="Middle Eastern" selected>Middle Eastern</option>
-        <option value="German">German</option>
-        <option value="Vegetarian">Vegetarian</option>
-        <option value="Indian">Indian</option>
-        <option value="New American">New American</option>
-      </select>
-      <%#= submit_tag "Find your cuisine", class: "btn btn-custom mt-3" %>
-      <button type="submit"><i class="fa fa-search "></i></button>
+      <%= form_tag events_path, method: :get, class: "form-group homepage-form justify-content-center " do %>
 
+        <div class="form-group">
+        <label for="cuisine">Choose a cuisine:</label>
+        <div class="d-flex">
+          <select  class="form-control" id="cuisine" name="cuisine">
+            <option value="Italian">Italian</option>
+            <option value="Fast food">Fast food</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Middle Eastern" selected>Middle Eastern</option>
+            <option value="German">German</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Indian">Indian</option>
+            <option value="New American">New American</option>
+          </select>
+          <button class="btn btn-custom" type="submit"><i class="fa fa-search "></i></button>
+        </div>
+        </div>
+        <%#= submit_tag "Find your cuisine", class: "btn btn-custom mt-3" %>
       <% end %>
 
     <% @events.each do |event| %>
       <%= link_to event_path(event) do  %>
-          <div class="card-custom d-flex">
-            <div class="fill">
-              <% if event.photos.attached? %>
-                <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill %>
-              <% end %>
-            </div>
-            <!-- <img width="120" src="<%= image_path("logo.png") %>" alt="#"> -->
-            <div class="lockup">
-              <h5><%= event.event_name %></h5>
-              <p> At <%= event.restaurant_name %></p>
-            <p class="date"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
-           </div>
+        <div class="card-custom d-flex">
+          <div class="fill">
+            <% if event.photos.attached? %>
+              <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill %>
+            <% end %>
           </div>
+          <!-- <img width="120" src="<%= image_path("logo.png") %>" alt="#"> -->
+          <div class="lockup">
+            <h5><%= event.event_name %></h5>
+            <p> At <%= event.restaurant_name %></p>
+          <p class="date"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
+         </div>
+        </div>
       <% end %>
     <% end %>
   <!-- </div> -->
