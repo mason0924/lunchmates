@@ -71,9 +71,11 @@
   </div>
  
   <div class="group-message" id="group-message">
+  <div id="group-message-board">
     <% @event.messages.each do |message| %>
       <%= render "messages/show", message: message %>
     <% end %>
+  </div>
  <%= render "messages/form", event: @event, message: @message %>
   </div>
 </div>
