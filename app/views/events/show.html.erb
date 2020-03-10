@@ -52,9 +52,11 @@
 
       <br>      <div>
         <% if @booking %>
-          <%= link_to "Unjoin", booking_path(@booking), method: :delete, class: "btn btn-custom btn btn-home"%>
+          <button id="sweet-alert-unjoin" class="btn btn-custom btn btn-home">Unjoin</button>
+          <%= link_to "Unjoin", booking_path(@booking), method: :delete, class: "btn btn-custom btn btn-home hidden", id: "unjoin-button" %>
         <% elsif policy(Booking.new(event: @event)).create? %>
-          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home"%>
+          <button id="sweet-alert-join" class="btn btn-custom btn btn-home">Join</button>
+          <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home hidden", id: "join-button" %>
         <% end %>
 
         <% if policy(@event).edit? %>
