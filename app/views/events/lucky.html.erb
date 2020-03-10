@@ -2,9 +2,12 @@
   <div class="row">
     <div class="col-12 my-4">
       <h1> You guys should sit together!</h1>
-
-       <%= cl_image_tag @user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
-       <%= cl_image_tag @current_user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+        <% if @user.photo.attached? %>
+          <%= cl_image_tag @user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+        <% end %>
+        <% if @current_user.photo.attached? %>
+          <%= cl_image_tag @current_user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+        <% end %>
      <div>
       <strong><%= @user.first_name %></strong> is also goinig to Little Green Rabbit for lunch at the same time. You guys should totally sit together. Click “Yes” to create a lunch event!
       <br>
