@@ -1,20 +1,25 @@
 <div class="container">
   <div class="row">
     <div class="cards col-12" id="list">
-      <%= form_tag events_path, method: :get, class: "homepage-form justify-content-center " do %>
+      <%= form_tag events_path, method: :get, class: "form-group homepage-form justify-content-center " do %>
+
+        <div class="form-group">
         <label for="cuisine">Choose a cuisine:</label>
-        <select id="cuisine" name="cuisine">
-          <option value="Italian">Italian</option>
-          <option value="Fast food">Fast food</option>
-          <option value="Japanese">Japanese</option>
-          <option value="Middle Eastern" selected>Middle Eastern</option>
-          <option value="German">German</option>
-          <option value="Vegetarian">Vegetarian</option>
-          <option value="Indian">Indian</option>
-          <option value="New American">New American</option>
-        </select>
+        <div class="d-flex">
+          <select  class="form-control" id="cuisine" name="cuisine">
+            <option value="Italian">Italian</option>
+            <option value="Fast food">Fast food</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Middle Eastern" selected>Middle Eastern</option>
+            <option value="German">German</option>
+            <option value="Vegetarian">Vegetarian</option>
+            <option value="Indian">Indian</option>
+            <option value="New American">New American</option>
+          </select>
+          <button class="btn btn-custom" type="submit"><i class="fa fa-search "></i></button>
+        </div>
+        </div>
         <%#= submit_tag "Find your cuisine", class: "btn btn-custom mt-3" %>
-        <button type="submit"><i class="fa fa-search "></i></button>
       <% end %>
 
     <% @events.each do |event| %>
