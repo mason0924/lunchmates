@@ -15,7 +15,9 @@ initFlatpickr();
 toggleMap();
 
 initSweetalert('#sweet-alert-join', {
-  title: "You are joining the event!"
+  title: "You are joining the event!",
+  text: "Come hungry!",
+  icon: "success"
 }, (value) => {
   if (value) {
     const link = document.querySelector('#join-button');
@@ -24,8 +26,8 @@ initSweetalert('#sweet-alert-join', {
 });
 
 initSweetalert('#sweet-alert-unjoin', {
-  title: "Bye~",
-  icon: "warning"
+  title: "You have unjoined the event",
+  icon: "error"
 }, (value) => {
   if (value) {
     const link = document.querySelector('#unjoin-button');
