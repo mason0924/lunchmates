@@ -11,7 +11,7 @@
               <div class="card-custom d-flex">
                 <div class="fill">
                   <% if event.photos %>
-                    <%= cl_image_tag @event.photos.first.key, width: 100, heght: 100, crop: :fill %>
+                    <%= cl_image_tag @event.photos.first.key, width: 100, height: 100, crop: :fill %>
                   <% end %>
               </div>            <div class="lockup">
               <h5><%= event.event_name %></h5>
@@ -33,7 +33,7 @@
           <div class="card-custom d-flex">
             <div class="fill">
               <% if booking.event.photos %>
-                <%= cl_image_tag booking.event.photos.first.key, width: 100, heght: 100, crop: :fill %>
+                <%= cl_image_tag booking.event.photos.first.key, width: 100, height: 100, crop: :fill %>
               <% end %>            </div>
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
