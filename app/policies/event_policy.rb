@@ -13,6 +13,10 @@ class EventPolicy < ApplicationPolicy
     return show?
   end
 
+  def lucky?
+    return show?
+  end
+
   def update?
     event_creator?
   end
