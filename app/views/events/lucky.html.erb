@@ -8,7 +8,8 @@
      <div>
       <strong><%= @user.first_name %></strong> is also goinig to Little Green Rabbit for lunch at the same time. You guys should totally sit together. Click “Yes” to create a lunch event!
       <br>
-      <%= link_to "Join", event_path(@event.id), class: "btn btn-custom"%>
+      <br>
+      <%= link_to "Yes!", event_path(@event.id), class: "btn btn-custom"%>
      </div>
     </div>
   </div>
