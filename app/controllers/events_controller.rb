@@ -71,6 +71,12 @@ class EventsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def lucky
+    @event = Event.where(cuisine: current_user.preference).sample
+    authorize @event
+    @user = @event.user # The person you can sit next to :)
+  end
+
   private
 
   def event_params
