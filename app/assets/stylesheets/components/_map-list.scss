@@ -1,0 +1,23 @@
+.map-list {
+  width: 100%;
+  justify-content: center;
+  position: sticky;
+  bottom: 60px;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-map {
+  background-color: white;
+  margin: 0px auto;
+  border-radius: 5px;
+  color:black;
+  // border: 1px solid #FFA892;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  font-family: 'Rubik', sans-serif;
+}
+
+.hidden {
+  display: none;
+}
