@@ -9,9 +9,11 @@
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
         <div class="image-gallery mb-4 mt-2 rounded-sm" style="height: 215px; overflow: auto; white-space: nowrap;">
+          <% if @event.photos.attached? %>
           <% @event.photos.each do |photo| %>
             <%= cl_image_tag photo.key, height: 214, crop: :fill, class: "restaurant_img" %>
           <% end %>
+        <% end %>
       </div>
         <h5><strong><%= @event.restaurant_name %></strong></h5>
         <p><%= @event.restaurant_address %></p>
@@ -30,7 +32,9 @@
       </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
         <%= link_to user_path(@host) do %>
+        <% if @event.photos.attached? %>
           <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+          <% end %>
         <% end %>
         <br>
         <p class="mb-0 mt-3"><strong>Guests: </strong></p>
@@ -56,7 +60,7 @@
         <% if policy(@event).edit? %>
           <%= link_to "Edit", edit_event_path(@event), class: "btn btn-success" %>
         <% end %>
-        
+
         <% if policy(@event).destroy? %>
           <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %>
         <% end %>
@@ -66,11 +70,11 @@
   <div class="group-message">
     <% @event.messages.each do |message| %>
     <div>
-      <p class="message-writer"><%=  message.user.first_name%>: <%=  message.content%> 
+      <p class="message-writer"><%=  message.user.first_name%>: <%=  message.content%>
         <br>
         <span class="message-time">at <%= message.created_at.strftime("%e %b %Y %l:%M %P") %></span>
       </p>
-      
+
     </div>
     <% end %>
     <%= simple_form_for([@event, @message]) do |f| %>
