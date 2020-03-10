@@ -1,7 +1,7 @@
 <div class="fixed-top navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "lunchmates-logo-05.png" %>
-    <% end %>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -10,43 +10,44 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item ">
-          <% if current_user.photo.attached? %>
-            <%= link_to cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-            <%= link_to "Edit",  edit_user_registration_path , class: "nav-link" %>
-          <% end %>
+        <% if current_user.photo.attached? %>
+        <li class="nav-item position-relative">
+          <%= link_to "", edit_user_registration_path, class: "absolute-0-0"  %>
+          <%= cl_image_tag current_user.photo.key,  class: "avatar dropdown-toggle" , crop: :fit %>
         </li>
-     <%#= link_to image_tag(current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data:), edit_user_registration_path %>
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
+        <% else %>
+      <% end %>
 
-        <li class="nav-item ">
-          <%= link_to "Events", events_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
 
-        <li class="nav-item ">
-          <%= link_to "Feelin lucky", lucky_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item ">
+        <%= link_to "Events", events_path, class: "nav-link" %>
+      </li>
 
-        <li class="nav-item">
-          <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item ">
+        <%= link_to "Feelin lucky", lucky_path, class: "nav-link" %>
+      </li>
 
-        <li class="nav-item">
-          <%= link_to "Create", new_event_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item">
+        <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+      </li>
 
-        <li>
-          <div class="nav-item" >
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          </div>
-        </li>
+      <li class="nav-item">
+        <%= link_to "Create", new_event_path, class: "nav-link" %>
+      </li>
+
+      <li>
+        <div class="nav-item" >
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+        </div>
+      </li>
 
       <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+      <li class="nav-item">
+        <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+      </li>
       <% end %>
     </ul>
   </div>
