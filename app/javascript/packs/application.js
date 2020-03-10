@@ -14,16 +14,22 @@ initDetectLocation();
 initFlatpickr();
 toggleMap();
 
-initSweetalert('#sweet-alert-join', {
-  title: "You are joining the event!",
-  text: "Come hungry!",
-  icon: "success"
-}, (value) => {
-  if (value) {
-    const link = document.querySelector('#join-button');
-    link.click();
-  }
-});
+const joinButton = document.getElementById('sweet-alert-join');
+if (joinButton) {
+  const location = joinButton.dataset.location;
+  const restaurantName = joinButton.dataset.name;
+
+  initSweetalert('#sweet-alert-join', {
+    title: "You are joining the event!",
+    text: `Come hungry to ${restaurantName}, which is located at ${location}`,
+    icon: "success"
+  }, (value) => {
+    if (value) {
+      const link = document.querySelector('#join-button');
+      link.click();
+    }
+  });
+}
 
 initSweetalert('#sweet-alert-unjoin', {
   title: "You have unjoined the event",

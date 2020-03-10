@@ -1,0 +1,6 @@
+<div class="message>
+  <p class="message-writer"><%=  message.user.first_name%>: <%=  message.content%>
+    <br>
+    <span class="message-time">at <%= message.created_at.strftime("%e %b %Y %l:%M %P") %></span>
+  </p>
+</div>
