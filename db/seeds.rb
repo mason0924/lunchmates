@@ -37,6 +37,7 @@ maria = User.create!( first_name: "Maria", last_name: "Rose", email:"maria@gmail
 fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatimah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
+thomas = User.create!( first_name: "Thomas", last_name: "Starzynski ", email:"thomas@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 
 puts 'Creating Events'
 # Event
@@ -163,9 +164,8 @@ event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image
 event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583505444/Restaurant%20Picutres/shutterstock_243788887-1024x1024_glvmr9.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
 event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583505475/Restaurant%20Picutres/McDonald_27s_2C_6875_Sand_Lake_Rd_2C_Orlando_interior_2_xtursd.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
 
-
 puts 'Creating users photos (will take very long)'
-users = [azadeh, mana, mattia, mason, caro, emma, jennifer, raja, tako, sam, katy, ronald, eva, kenny, rahim, fernando, maria, fatimah, rosmah, juan]
+users = [azadeh, mana, mattia, mason, caro, emma, jennifer, raja, tako, sam, katy, ronald, eva, kenny, rahim, fernando, maria, fatimah, rosmah, juan, thomas]
 
 images_user = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583406854/User%20Pictures/profilepic-A_lowotm.jpg",
@@ -187,7 +187,8 @@ images_user = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408242/User%20Pictures/profilepic-12_ysl3xp.jpg",
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408243/User%20Pictures/profilepic-13_z7faic.jpg",
   "https://res.cloudinary.com/lunchmates/image/upload/v1583408244/User%20Pictures/profilepic-14_edcxc6.jpg",
-  "https://res.cloudinary.com/lunchmates/image/upload/v1583408245/User%20Pictures/profilepic-15_una5hf.jpg"
+  "https://res.cloudinary.com/lunchmates/image/upload/v1583408245/User%20Pictures/profilepic-15_una5hf.jpg",
+  "https://res.cloudinary.com/lunchmates/image/upload/v1583778182/User%20Pictures/thomas-1_mjld0q.jpg"
 ]
 images_user.each_with_index do |image, index|
   file = URI.open(image)
@@ -196,3 +197,5 @@ end
 
 puts "Finished"
 puts "Now you have #{User.all.count} users, #{Event.all.count} events, and #{Booking.all.count} bookings"
+
+
