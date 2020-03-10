@@ -20,7 +20,7 @@
 
         <br>
 
-        <p> <strong>Happening on <%= @event.start_time.strftime("%e %b %Y") %> </strong></p>
+        <p> <%= '<i class="far fa-calendar-alt"></i>'.html_safe %>  <%= @event.start_time.strftime("%e %b %Y") %></p>
         <p> <strong>From  <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%> </strong></p>
 
         <p><strong>Price range: <%= "€" * @event.restaurant_price_range %></strong></p>
