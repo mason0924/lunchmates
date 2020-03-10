@@ -11,13 +11,12 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item ">
+          <%= link_to edit_user_registration_path do %>
           <% if current_user.photo.attached? %>
-            <li class="nav-item position-relative">
-              <%= link_to "", edit_user_registration_path, class: "absolute-0-0"  %>
-              <%= cl_image_tag current_user.photo.key,  class: "avatar dropdown-toggle" , crop: :fit %>
+          <%= cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle"%>
             </li>
           <% end %>
-        </li>
+          <% end %>
      <%#= link_to image_tag(current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data:), edit_user_registration_path %>
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
@@ -53,4 +52,3 @@
     </ul>
   </div>
 </div>
-
