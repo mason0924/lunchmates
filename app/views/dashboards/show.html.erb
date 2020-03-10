@@ -11,11 +11,9 @@
               <div class="card-custom d-flex">
                 <div class="fill">
                   <% if event.photos %>
-                    <%= cl_image_tag event.photos.first.key, width: 100, heght: 100, crop: :fill %>
+                    <%= cl_image_tag @event.photos.first.key, width: 100, heght: 100, crop: :fill %>
                   <% end %>
-              </div>
-
-            <div class="lockup">
+              </div>            <div class="lockup">
               <h5><%= event.event_name %></h5>
               <p> At <%= event.restaurant_name %></p>
             <p class="date"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
@@ -25,28 +23,18 @@
       <% end %>
     </div>
   </div>
-</div>
-
-
-
-<div class="container">
+</div><div class="container">
   <div class="row">
     <div class="cards col-12">
-      <h3>Joining</h3>
-
-        <% if current_user.bookings.empty? %>
+      <h3>Joining</h3>        <% if current_user.bookings.empty? %>
           <p>You don't have any upcoming bookings!</p>
-        <% end %>
-
-      <% @bookings.each do |booking| %>
+        <% end %>      <% @bookings.each do |booking| %>
         <%= link_to event_path(booking.event) do  %>
           <div class="card-custom d-flex">
             <div class="fill">
               <% if booking.event.photos %>
                 <%= cl_image_tag booking.event.photos.first.key, width: 100, heght: 100, crop: :fill %>
-              <% end %>
-
-            </div>
+              <% end %>            </div>
             <div class="lockup">
               <h5><%= booking.event.event_name %></h5>
               <p> At <%= booking.event.restaurant_name %></p>
@@ -58,10 +46,3 @@
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
