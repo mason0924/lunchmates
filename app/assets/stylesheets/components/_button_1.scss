@@ -49,8 +49,8 @@
 .btn-ghost {
     text-decoration: none;
     font-weight:600;
-    color: #FFA892 ;
-    border: 2px solid #FFA892;
+    color: #999999 ;
+    border: 1px solid #999999;
     padding: 0.65em 1.7em;
     display: inline-block;
     overflow: hidden;
@@ -63,6 +63,17 @@ a.btn-ghost:hover{
   color: white;
 }
 
+.btn-create-message {
+  background-color: #b19cd9;
+  border: 1px solid #b19cd9;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  &:hover {
+    color:#808080;
+  }
+}
 
 
 
