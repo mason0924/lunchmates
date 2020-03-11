@@ -15,19 +15,21 @@
 }
 
 #yes-button:active{
-  font-size: 3.5em;
+  font-size: 5.5em;
 }
 
 .gif-container {
   height: calc(100vh - 80px);
-  width: 100vw;
+  // width: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .loading-image {
-  width: 75%;
+  // width: 75%;
+  height: 300px;
+  width: 300px;
 }
 
 #lucky-page{
