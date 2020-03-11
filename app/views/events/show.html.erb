@@ -5,7 +5,6 @@
           <%= link_to '', events_path(@event), class: "absolute-0-0"%>
           <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
         </div>
-        <br>
       <div>
         <h2> <strong> <%= @event.event_name %></strong></h2>
         <div class="image-gallery mb-4 mt-2 rounded-sm" style="height: 215px; overflow: auto; white-space: nowrap;">
@@ -15,21 +14,20 @@
             <% end %>
           <% end %>
         </div>
-        <h5><strong><%= @event.restaurant_name %></strong></h5>
-        <p><%= @event.restaurant_address %></p>
+        <h4><strong><%= @event.restaurant_name %></strong></h4>
+        <h6><%= @event.restaurant_address %></h6>
 
         <br>
 
-        <p> <%= '<i class="far fa-calendar-alt"></i>'.html_safe %>  <%= @event.start_time.strftime("%e %b %Y") %></p>
-        <p> <%= '<i class="far fa-clock"></i>'.html_safe %> <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%></p>
+        <h6><strong><%= '<i class="far fa-calendar-alt"></i>'.html_safe %>  <%= @event.start_time.strftime("%e %b %Y") %> </strong></h6>
+        <h6><strong><%= '<i class="far fa-clock"></i>'.html_safe %> <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%></strong></h6>
 
-        <p> <%= '<i class="fas fa-money-bill-wave"></i>'.html_safe %> <%= "€" * @event.restaurant_price_range %></p>
+        <h6><strong><%= '<i class="fas fa-money-bill-wave"></i>'.html_safe %> <%= "€" * @event.restaurant_price_range %></strong></p>
       </div>
 
       <div>
-        <br>
           <div>
-            <p><%= @event.description %></p>
+            <h6><%= @event.description %></h6>
           </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
          <%= link_to user_path(@host) do %>
