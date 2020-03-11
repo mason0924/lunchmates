@@ -40,8 +40,8 @@
         <p class="mb-0 mt-3"><strong>Guests: </strong></p>
         <div class="d-flex">
            <% Booking.joins(:event).where(event: @event).each do |booking|  %>
-            <div>
-              <p class="mb-0"><%= booking.user.first_name %></p>
+            <div class="mx-1">
+              <p class=" text-center mb-0"><%= booking.user.first_name %></p>
                 <%= link_to user_path(booking.user_id) do %>
                   <%= cl_image_tag booking.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
                 <% end %>
@@ -69,7 +69,7 @@
       </div>
     </div>
   </div>
- 
+
   <div class="group-message" id="group-message">
   <div id="group-message-board">
     <% @event.messages.each do |message| %>
