@@ -61,11 +61,11 @@
         <% end %>
 
         <% if policy(@event).edit? %>
-          <%= link_to "Edit", edit_event_path(@event), class: "btn btn-custom" %>
+          <%= link_to "Edit", edit_event_path(@event), class: "btn btn-custom px-4 py-2" %>
         <% end %>
 
         <% if policy(@event).destroy? %>
-          <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-custom" %>
+          <%= link_to "Remove", event_path(@event), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-ghost py-2 px-3" %>
         <% end %>
       </div>
     </div>
