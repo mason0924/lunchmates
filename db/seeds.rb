@@ -176,8 +176,8 @@ event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image
 
 puts 'Creating events photos 14'
 event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918615/Restaurant%20Picutres/24354220683_035d5b5981_trntms.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
-event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918620/Restaurant%20Picutres/24863114232_5c0c76ffc7_n_tepfvx.jpg") filename: 'rp2.jpg', content_type: 'image/jpg')
-event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918710/Restaurant%20Picutres/vegan-german-sp_C3_A4tzle-2-720x720_tglxqv.jpg") filename: 'rp3.jpg', content_type: 'image/jpg')
+event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918620/Restaurant%20Picutres/24863114232_5c0c76ffc7_n_tepfvx.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918710/Restaurant%20Picutres/vegan-german-sp_C3_A4tzle-2-720x720_tglxqv.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
 
 puts 'creating events photos 15'
 event_15.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918971/Restaurant%20Picutres/winebar_wddcgn.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
