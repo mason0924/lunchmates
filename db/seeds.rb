@@ -23,7 +23,7 @@ mattia = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@g
 mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Came straight from NYC couple of months ago, show me around :8")
 caro = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456", profile: "Hamburgerin Berlin based! ")
 emma = User.create!( first_name: "Emma", last_name: "Cole", email:"ebony@gmail.com", password: "123456", profile: "Just moved here from Norway, let's go swimming after lunch")
-jennifer = User.create!( first_name: "Jennifer", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Would like to meet new peeps in this big city, just please let's not talk about work during lunch")
+jenny = User.create!( first_name: "jenny", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Would like to meet new peeps in this big city, just please let's not talk about work during lunch")
 raja = User.create!( first_name: "Raja", last_name: "Kash", email:"raja@gmail.com", password: "123456", profile: "Love travelling, nature and coding. Tell me your stories in front of a good dish")
 tako = User.create!( first_name: "Tako", last_name: "Hiroki", email:"tako@gmail.com", password: "123456", profile: "Just started my BA in Biology here, would like to meet some people with total different interests tho")
 sam = User.create!( first_name: "Sam", last_name: "Smith", email:"sam@gmail.com", password: "123456", profile: "IT MA student here. Pull me out of my cubicle!")
@@ -32,7 +32,7 @@ ronald = User.create!( first_name: "Ronald", last_name: "Donald", email:"ronald@
 eva = User.create!( first_name: "Eva", last_name: "Vida", email:"eva@gmail.com", password: "123456", profile: "What are your nicest experiences in Berlin so far? Let's get to know each other and create more")
 kenny = User.create!( first_name: "Kenny", last_name: "Manny", email:"kenny@gmail.com", password: "123456", profile: "Pizza addicted, can show you the best in town")
 rahim = User.create!( first_name: "Rahim", last_name: "Mat", email:"rahim@gmail.com", password: "123456", profile: "Straight from Mombai, just for some months - how me the best indian places")
-fernando = User.create!( first_name: "fernando", last_name: "Cruz", email:"fernando@gmail.com", password: "123456", profile: "Aloha from Mexico! Up for some lunch together, and for a Mezcal margherita afterwards!")
+mark = User.create!( first_name: "mark", last_name: "Cruz", email:"mark@gmail.com", password: "123456", profile: "Aloha from Mexico! Up for some lunch together, and for a Mezcal margherita afterwards!")
 maria = User.create!( first_name: "Maria", last_name: "Rose", email:"maria@gmail.com", password: "123456", profile: "I love travelling and trying other culture's food. Show me the weirdest restaurants around")
 fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatimah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Like to meet new people every day, let's eat a Döner in the park!")
@@ -46,14 +46,14 @@ event_2 = Event.create!( user: ronald, event_name: "KFC lovers", cuisine: "Fast 
 event_3 = Event.create!( user: tako, event_name: "Ishin lovers🍣", cuisine: "Japanese", description: "Their service is kind of rude but maybe because I was alone...Would you join me?" , restaurant_name: " Ishin ", restaurant_address: " Charlottenstraße 16, 10117 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 13:00"), end_time: DateTime.parse("06/03/2020 13:30"), spots: 4 )
 event_4 = Event.create!( user: rosmah, event_name: "Syrian sandwich", cuisine: "Middle Eastern ", description: "Hi, I'm new in Berlin and looking for friends. This Syrian place is pretty authentic. Please join me if you are interested. Thanks." , restaurant_name: " Yorak ", restaurant_address: " Wilhelmstraße 41A, 10963 Berlin ", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 14:45"), spots: 5 )
 event_5 = Event.create!( user: caro, event_name: "Spicy noodles🍜", cuisine: "Chinese", description: "I love spicy soup noodles!" , restaurant_name: "Liu Noodles House ", restaurant_address: "Kronenstraße 72, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 5 )
-event_6 = Event.create!( user: jennifer, event_name: "Johny's chip in", cuisine: "German", description: "let's go to Jony's" , restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:30"), spots: 3 )
+event_6 = Event.create!( user: jenny, event_name: "Johny's chip in", cuisine: "German", description: "let's go to Jony's" , restaurant_name: "  Johny's", restaurant_address: " Markgrafenstraße 56, 10117 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:30"), spots: 3 )
 event_7 = Event.create!( user: emma, event_name: "Bocca di Bacco fans", cuisine: "Italian", description: "Meet me at Bocca di Bacco" , restaurant_name: " Bocca di Bacco ", restaurant_address: " Friedrichstraße 167-168, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 15:45"), spots: 5 )
 event_8 = Event.create!( user: mana, event_name: "QIU Restaurant lovers", cuisine: "German", description: "let's meet up at QIU - Bar & Restaurant" , restaurant_name: " QIU - Bar & Restaurant", restaurant_address: " Potsdamer Straße 3, 10785 Berlin ", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:00"), spots: 4 )
 event_9 = Event.create!( user: katy, event_name: "Salad and chat", cuisine: "Vegetarian", description: "I have an hour for lunch break, would be nice if someone can join me :-)" , restaurant_name: "Little Green Rabbit", restaurant_address: "Friedrichstraße 200, 10117 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 15:00"), end_time: DateTime.parse("06/03/2020 16:30"), spots: 4 )
 event_10 = Event.create!( user: juan, event_name: "Maximilians lovers", cuisine: "German", description: "It's very touristy and fun. Beers are amazing!",  restaurant_name: " Maximilians ", restaurant_address: "  Friedrichstraße 185-190, 10117 Berlin ", restaurant_price_range: 3, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 5 )
 event_11 = Event.create!( user: raja, event_name: "Exchange student from India 🍛", cuisine: "Indian", description: "Hi my name is Raja. I'm an exchange student from India and new in Berlin. I usually come here to have lunch during the lunch time. I can help translating the menu! :)",  restaurant_name: " Delhi 6 ", restaurant_address: "Friedrichstraße 237, 10969 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("06/03/2020 17:00"), end_time: DateTime.parse("06/03/2020 17:30"), spots: 5 )
 event_12 = Event.create!( user: kenny, event_name: "Business lunch💼", cuisine: "New American", description: "On a business trip in Berlin. Join me if you are interested to have a quick lunch",  restaurant_name: "SOLAR Bar Restaurant Lounge", restaurant_address: "Stresemannstraße 76, 10963 Berlin", restaurant_price_range: 5, start_time: DateTime.parse("06/03/2020 16:00"), end_time: DateTime.parse("06/03/2020 17:00"), spots: 2 )
-event_13 = Event.create!( user: fernando, event_name: "I'm lovin🍟 ", cuisine: "Fast Food", description: "I love McNuggets. No judgement!" , restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 3 )
+event_13 = Event.create!( user: mark, event_name: "I'm lovin🍟 ", cuisine: "Fast Food", description: "I love McNuggets. No judgement!" , restaurant_name: "McDonald's", restaurant_address: "Friedrichstraße 207, 10969 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("06/03/2020 14:00"), end_time: DateTime.parse("06/03/2020 15:00"), spots: 3 )
 event_14 = Event.create!( user: maria, event_name: "Let's go Deutsch!", cuisine: "German", description: "Who else is up for some Spätzle and Kartoffeln?", restaurant_name: "Hackethal's", restaurant_address: "Pflugstrasse 11, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 18:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 5 )
 event_15 = Event.create!(user: fatimah, event_name: "A plate in Slate", cuisine: "Nouvelle", description: "Found out this chic place, join me for dinner before the Party today!", restaurant_name: "Slate", restaurant_address: "Elisabethkirchstraße 2, 10115 Berlin", restaurant_price_range: 3, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
 event_16 = Event.create!(user: rahim, event_name: "Spring is coming, let's go South", cuisine: "Greek", description: "By warmer weather and sunnier days, a glass of wine with good Mediterranean food is perfect", restaurant_name: "Hinterhof", restaurant_address: "Chausseestraße 122, 10115 Berlin", restaurant_price_range: 3, start_time: DateTime.parse("13/03/2020 18:00"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6)
@@ -67,7 +67,7 @@ event_23 = Event.create!(user: azadeh, event_name: "Quick dinner before the part
 
 puts 'Creating Bookings'
 # Booking
-booking_1 = Booking.create!( event: event_1, user: fernando ) #pasta
+booking_1 = Booking.create!( event: event_1, user: mark ) #pasta
 booking_2 = Booking.create!( event: event_1, user: emma )
 
 # booking_4 = Booking.create!( event: event_2, user: mason ) #KFC
@@ -93,7 +93,7 @@ booking_16 = Booking.create!( event: event_7, user: tako )
 booking_17 = Booking.create!( event: event_8, user: maria )#qiu
 booking_18 = Booking.create!( event: event_8, user: rosmah )
 
-booking_19 = Booking.create!( event: event_9, user: jennifer )#salad
+booking_19 = Booking.create!( event: event_9, user: jenny )#salad
 booking_20 = Booking.create!( event: event_9, user: tako )
 
 booking_21 = Booking.create!( event: event_10, user: fatimah )#maxi
@@ -174,8 +174,58 @@ event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image
 event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583505444/Restaurant%20Picutres/shutterstock_243788887-1024x1024_glvmr9.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
 event_13.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583505475/Restaurant%20Picutres/McDonald_27s_2C_6875_Sand_Lake_Rd_2C_Orlando_interior_2_xtursd.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
 
+puts 'Creating events photos 14'
+event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918615/Restaurant%20Picutres/24354220683_035d5b5981_trntms.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918620/Restaurant%20Picutres/24863114232_5c0c76ffc7_n_tepfvx.jpg") filename: 'rp2.jpg', content_type: 'image/jpg')
+event_14.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918710/Restaurant%20Picutres/vegan-german-sp_C3_A4tzle-2-720x720_tglxqv.jpg") filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating events photos 15'
+event_15.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918971/Restaurant%20Picutres/winebar_wddcgn.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_15.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918962/Restaurant%20Picutres/restaurant-bar-slate-in-berlin-mitte-interieur.1512111460_muer3c.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_15.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583918971/Restaurant%20Picutres/winebar_wddcgn.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 16'
+event_16.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919368/Restaurant%20Picutres/398869057_VFoA6EqqHXniyOfXNjsOTiS8HLogIqK6ZSXjxdd0nMk_fbdsah.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_16.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919379/Restaurant%20Picutres/top10berlin_griechische-restaurants_hinterhof-cafe-restaurant-weinbar001_lp5fjn.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_16.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919391/Restaurant%20Picutres/mainroom_mutn3p.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 17'
+event_17.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919640/Restaurant%20Picutres/1463347956602_961825_oifiep.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_17.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919624/Restaurant%20Picutres/hcmp27844_155517_zwwoud.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_17.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919611/Restaurant%20Picutres/1463347730987_134351_nxyalz.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 18'
+event_18.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919907/Restaurant%20Picutres/aiko_sushi_2_nattxg.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_18.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919923/Restaurant%20Picutres/photo0jpg_daevtl.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_18.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583919947/Restaurant%20Picutres/great-vibes_hzjdoc.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 19'
+event_19.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920365/Restaurant%20Picutres/b254aa87cd3f72d028a55470165517d1_uuo9sh.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_19.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920393/Restaurant%20Picutres/Tommis-Burger-Joint-Berlin-Cheeseburger_fmqryu.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_19.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920413/Restaurant%20Picutres/Cheeseburger-with-Bacon-and-Fries-close-up-at-Tommis-Burger-Joint-Berlin_tdhzv9.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 20'
+event_20.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920507/Restaurant%20Picutres/o_hrqozf.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_20.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920532/Restaurant%20Picutres/papa-pane-friedrichshain-8_arzgqk.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_20.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920556/Restaurant%20Picutres/pizza-papa-pane_zkclwx.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 21'
+event_21.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920627/Restaurant%20Picutres/babel-berlin-restaurant-outside_d3jkvw.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_21.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920653/Restaurant%20Picutres/photo0jpg_eekawf.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_21.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920683/Restaurant%20Picutres/babel_fcqcho.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 22'
+event_22.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920871/Restaurant%20Picutres/l_w2nfa0.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_22.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920901/Restaurant%20Picutres/l_szvobe.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_22.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583920933/Restaurant%20Picutres/l_njt3me.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
+puts 'creating event photos 23'
+event_23.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583921046/Restaurant%20Picutres/factory-kitchen-berlin-by-stephan-pramme-7_0_pbdaik.jpg"), filename: 'rp1.jpg', content_type: 'image/jpg')
+event_23.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583921079/Restaurant%20Picutres/the-factory-kitchen-exterior_m4rczi.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
+event_23.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583921114/Restaurant%20Picutres/market-at-factory-kitchen_wayvjn.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
+
 puts 'Creating users photos (will take very long)'
-users = [azadeh, mana, mattia, mason, caro, emma, jennifer, raja, tako, sam, katy, ronald, eva, kenny, rahim, fernando, maria, fatimah, rosmah, juan, thomas]
+users = [azadeh, mana, mattia, mason, caro, emma, jenny, raja, tako, sam, katy, ronald, eva, kenny, rahim, mark, maria, fatimah, rosmah, juan, thomas]
 
 images_user = [
   "https://res.cloudinary.com/lunchmates/image/upload/v1583406854/User%20Pictures/profilepic-A_lowotm.jpg",
