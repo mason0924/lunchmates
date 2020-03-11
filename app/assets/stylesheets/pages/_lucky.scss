@@ -13,3 +13,57 @@
 #yes-button{
   font-size: 2.5em;
 }
+
+#yes-button:active{
+  font-size: 5.5em;
+}
+
+.gif-container {
+  height: calc(100vh - 80px);
+  // width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loading-image {
+  // width: 75%;
+  height: 300px;
+  width: 300px;
+}
+
+#lucky-page{
+  .left-avatar{
+    animation-duration: 2.5s;
+    animation-name: slideInFromLeft;  
+  }
+
+  .right-avatar{
+    animation-duration: 2.5s;
+    animation-name: slideInFromRight;  
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

@@ -7,6 +7,7 @@ import { initAutocomplete } from '../plugins/init_autocomplete';
 import { initDetectLocation } from '../plugins/init_detectlocation';
 import {toggleMap} from '../plugins/map-list_toggle';
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { initLoadingGif } from '../plugins/init_loading_gif';
 
 initMapbox();
 initAutocomplete();
@@ -47,3 +48,5 @@ initSweetalert('#sweet-alert-unjoin', {
     link.click();
   }
 });
+
+initLoadingGif();
