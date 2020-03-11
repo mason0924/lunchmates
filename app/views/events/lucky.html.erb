@@ -1,4 +1,8 @@
-<div class="container" id="lucky-page">
+<div class="gif-container"  id="lucky-loading-image">
+  <%= image_tag "Lunchmate-picking-2.gif", class: "loading-image" %>
+</div>
+
+<div class="container d-none" id="lucky-page">
   <div class="row">
 <div class="position-relative back-btn">
 <%= link_to '', :back , class: "absolute-0-0"%>
@@ -8,13 +12,13 @@
       <h1> You guys should sit together!</h1>
         <% if @user.photo.attached? %>
           <%= link_to user_path(@user) do %>
-            <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2"%>
+            <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2 left-avatar"%>
           <% end %>
         <% end %>
         
         <% if @current_user.photo.attached? %>
           <%= link_to user_path(@current_user) do %>
-            <%= cl_image_tag @current_user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2"%>
+            <%= cl_image_tag @current_user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2 right-avatar"%>
           <% end %>
         <% end %>
      <div>
