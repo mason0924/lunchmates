@@ -1,7 +1,9 @@
 
 <div class="image-gallery">
-  <% event.photos.each do |photo| %>
-    <%= cl_image_tag photo.key, height: 200, crop: :fill %>
+  <% if event.photos.attached? %>
+    <% event.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 200, crop: :fill %>
+    <% end %>
   <% end %>
 </div>
 
