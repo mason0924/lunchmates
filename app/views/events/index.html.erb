@@ -4,17 +4,19 @@
       <%= form_tag events_path, method: :get, class: "form-group homepage-form justify-content-center " do %>
 
         <div class="form-group">
-        <label for="cuisine">Choose a cuisine:</label>
+        <!-- <label for="cuisine">Choose a cuisine:</label> -->
         <div class="d-flex">
           <select  class="form-control" id="cuisine" name="cuisine">
+            <option value="" disabled selected hidden>Filter by cuisine</option>
             <option value="Italian">Italian</option>
             <option value="Fast food">Fast food</option>
             <option value="Japanese">Japanese</option>
-            <option value="Middle Eastern" selected>Middle Eastern</option>
+            <option value="Middle Eastern">Middle Eastern</option>
             <option value="German">German</option>
             <option value="Vegetarian">Vegetarian</option>
             <option value="Indian">Indian</option>
             <option value="New American">New American</option>
+            <option value="" >Show all</option>
           </select>
           <button class="btn btn-custom" type="submit"><i class="fa fa-search "></i></button>
         </div>
@@ -30,7 +32,6 @@
               <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill %>
             <% end %>
           </div>
-          <!-- <img width="120" src="<%= image_path("logo.png") %>" alt="#"> -->
           <div class="lockup">
             <h5><%= event.event_name %></h5>
             <p> At <%= event.restaurant_name %></p>
@@ -39,7 +40,6 @@
         </div>
       <% end %>
     <% end %>
-  <!-- </div> -->
     </div>
 
     <div

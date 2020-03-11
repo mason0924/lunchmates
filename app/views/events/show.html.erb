@@ -10,11 +10,11 @@
         <h2> <strong> <%= @event.event_name %></strong></h2>
         <div class="image-gallery mb-4 mt-2 rounded-sm" style="height: 215px; overflow: auto; white-space: nowrap;">
           <% if @event.photos.attached? %>
-          <% @event.photos.each do |photo| %>
-            <%= cl_image_tag photo.key, height: 214, crop: :fill, class: "restaurant_img" %>
+            <% @event.photos.each do |photo| %>
+              <%= cl_image_tag photo.key, height: 214, crop: :fill, class: "restaurant_img" %>
+            <% end %>
           <% end %>
-        <% end %>
-      </div>
+        </div>
         <h5><strong><%= @event.restaurant_name %></strong></h5>
         <p><%= @event.restaurant_address %></p>
 
@@ -27,14 +27,15 @@
       </div>
 
       <div>
-        <br>      <div>
-        <p><%= @event.description %></p>
-      </div>
+        <br>
+          <div>
+            <p><%= @event.description %></p>
+          </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
-        <%= link_to user_path(@host) do %>
-        <% if @event.photos.attached? %>
-          <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
-          <% end %>
+         <%= link_to user_path(@host) do %>
+            <% if @event.photos.attached? %>
+              <%= cl_image_tag @event.user.photo.key, width: 200, crop: :fill, class: "avatar" %>
+            <% end %>
         <% end %>
         <br>
         <p class="mb-0 mt-3"><strong>Guests: </strong></p>
@@ -55,7 +56,7 @@
           <button id="sweet-alert-unjoin" class="btn btn-custom btn btn-home">Unjoin</button>
           <%= link_to "Unjoin", booking_path(@booking), method: :delete, class: "btn btn-custom btn btn-home hidden", id: "unjoin-button" %>
         <% elsif policy(Booking.new(event: @event)).create? %>
-          <button id="sweet-alert-join" class="btn btn-custom btn btn-home" data-location="<%= @event.restaurant_address %>" data-name="<%= @event.restaurant_name %>">Join</button>
+          <button id="sweet-alert-join" class="btn btn-custom btn btn-home" data-time="<%= @event.start_time.strftime("%H:%M")%>" data-date="<%= @event.start_time.strftime("%e %b %Y")%>" data-location="<%= @event.restaurant_address %>" data-name="<%= @event.restaurant_name %>">Join</button>
           <%= link_to "Join", event_bookings_path(@event), method: :post, class: "btn btn-custom btn btn-home hidden", id: "join-button" %>
         <% end %>
 

@@ -10,7 +10,7 @@
             <%= link_to event_path(event) do  %>
               <div class="card-custom d-flex">
                 <div class="fill">
-                  <% if event.photos %>
+                  <% if event.photos.attached? %>
                     <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill %>
                   <% end %>
               </div>
@@ -33,7 +33,7 @@
         <%= link_to event_path(booking.event) do  %>
           <div class="card-custom d-flex">
             <div class="fill">
-              <% if booking.event.photos %>
+              <% if booking.event.photos.attached? %>
                 <%= cl_image_tag booking.event.photos.first.key, width: 100, height: 100, crop: :fill %>
               <% end %>            </div>
             <div class="lockup">

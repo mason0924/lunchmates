@@ -6,8 +6,11 @@
         <br>
 
     <div class="user-content">
+    <% if @user.photo.attached? %>
       <%= cl_image_tag @user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+    <% end %>
       <h1><%= @user.first_name %></h1>
       <p><%= @user.profile %></p>
     </div>
 </div>
+
