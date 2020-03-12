@@ -2,20 +2,23 @@
   width: 100%;
   justify-content: center;
   position: sticky;
-  bottom: 60px;
+  bottom: 40px;
   z-index: 100;
   display: flex;
-  justify-content: center;
+
 }
 
 .btn-map {
-  background-color: white;
+  background-color: #FFA892;
   margin: 0px auto;
   border-radius: 5px;
-  color:black;
+  color: white;
   // border: 1px solid #FFA892;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   font-family: 'Rubik', sans-serif;
+  height: 57px;
+  border-radius: 50%;
+  margin-right: 50px;
 }
 
 .hidden {
