@@ -1,3 +1,47 @@
+#lucky-button{
+  // height: 10em;
+  border-radius: 5px;
+  font-size: 40px;
+  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  // margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#lucky-button > p{
+-webkit-animation: 2s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
+animation: 2s linear infinite condemned_blink_effect;
+}
+
+@-webkit-keyframes condemned_blink_effect { 
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+@keyframes condemned_blink_effect {
+  0% {
+    visibility: hidden;
+  }
+  50% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+
+
 #lucky-page{
   text-align: center;
 }
@@ -15,6 +59,7 @@
 }
 
 #yes-button:active{
+  transform: translateX(200%);
   font-size: 5.5em;
 }
 
