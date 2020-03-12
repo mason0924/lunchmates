@@ -11,13 +11,7 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item ">
-          <%= link_to edit_user_registration_path do %>
-          <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle"%>
-            </li>
-          <% end %>
-          <% end %>
-     <%#= link_to image_tag(current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data:), edit_user_registration_path %>
+          
         <li class="nav-item">
           <%= link_to "Home", root_path, class: "nav-link" %>
         </li>
@@ -43,6 +37,14 @@
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </div>
         </li>
+        
+        <%= link_to edit_user_registration_path do %>
+          <% if current_user.photo.attached? %>
+          <%= cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle"%>
+            </li>
+          <% end %>
+          <% end %>
+     <%#= link_to image_tag(current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data:), edit_user_registration_path %>
 
       <% else %>
         <li class="nav-item">
