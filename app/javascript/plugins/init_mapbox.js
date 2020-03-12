@@ -7,16 +7,16 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/manajll/ck7owfbsy15r51iplhcp9h77y'
   });
 };
 
 const addMarkersToMap = (map, markers) => {
   markers.forEach((marker) => {
-    new mapboxgl.Marker()
+    new mapboxgl.Marker({ color: "#fcb7a6" })
       const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
 
-      new mapboxgl.Marker()
+      new mapboxgl.Marker({ color: "#fcb7a6" })
         .setLngLat([ marker.lng, marker.lat ])
         .setPopup(popup) // add this
         .addTo(map);
