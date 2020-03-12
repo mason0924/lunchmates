@@ -20,8 +20,8 @@ puts 'Creating Users'
 azadeh = User.create!( first_name: "Azadeh", last_name: "Aram", email:"azadeh@gmail.com", password: "123456", profile: "Hey! I just arrived here in Berlin to study coding, want to explore the city and meet new people:)")
 mana = User.create!( first_name: "Mana", last_name: "Jalili", email:"mana@gmail.com", password: "123456", profile: "In Berlin since a bit already, and hapy to show the little gems I found!")
 mattia = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@gmail.com", password: "123456", profile: "Just started a new job here, let's hang out and discover new places:)")
-mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Came straight from NYC couple of months ago, show me around :8")
-caro = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456", profile: "Hamburgerin Berlin based! ")
+mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Came straight from NYC couple of months ago, show me around 😊")
+caro = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456", profile: "Hamburgerin Berlin based! Also I won't repeat I'm a vegan every 8 seconds.")
 emma = User.create!( first_name: "Emma", last_name: "Cole", email:"ebony@gmail.com", password: "123456", profile: "Just moved here from Norway, let's go swimming after lunch")
 jenny = User.create!( first_name: "Jenny", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Would like to meet new peeps in this big city, just please let's not talk about work during lunch")
 raja = User.create!( first_name: "Raja", last_name: "Kash", email:"raja@gmail.com", password: "123456", profile: "Love travelling, nature and coding. Tell me your stories in front of a good dish")
@@ -38,7 +38,20 @@ fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatim
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Like to meet new people every day, let's eat a Döner in the park!")
 juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hey! working in a coworking space close to Stadtmitte, keen to meet other freelancers around")
 thomas = User.create!( first_name: "Thomas", last_name: "Starzynski ", email:"thomas@gmail.com", password: "123456", profile: "I love Pjelmjeni")
+tony = User.create!( first_name: "Tony", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "I love fast food! I know all the menu at KFC, McDonald's, Taco Bell. Try me💅")
+serenity = User.create!( first_name: "Serenity", last_name: "Gon ", email:"serenity@gmail.com", password: "123456", profile: "I used to be a vegetarian, but not anymore!😎")
+janice = User.create!( first_name: "Janice", last_name: "paik ", email:"janice@gmail.com", password: "123456", profile: "I'm from L.A. I'm super friendly and love taking care people around me.😎")
+alessandro = User.create!( first_name: "alessandro", last_name: "Rumor ", email:"alessandro@gmail.com", password: "123456", profile: "I'm an Italian. Italian food in Berlin are terrible. But some pizzas are fine, CAPISH?")
+alice = User.create!( first_name: "Alice", last_name: "Rumor ", email:"alice@gmail.com", password: "123456", profile: "I'm a fashion photographer. Came to Berlin to work for Zalando. I know my italian food.💅")
+mancy = User.create!( first_name: "Mancy", last_name: "Liang ", email:"mancy@gmail.com", password: "123456", profile: "I know I can make good chinese food but I also love eating out, cuz I hate washing dishes.")
+felix = User.create!( first_name: "Felix", last_name: "Rumor ", email:"felix@gmail.com", password: "123456", profile: "I'm from Germany. I love tea. I love beer.")
+clem = User.create!( first_name: "Clem", last_name: "Rumor ", email:"clem@gmail.com", password: "123456", profile: "I graduate from NYU Business School. I love all kind of cuisine, especially sushi.")
+burak = User.create!( first_name: "Burak", last_name: "Rumor ", email:"burak@gmail.com", password: "123456", profile: "I'm a young professional. Usually my lunch is quite fancy tbh.")
+cody = User.create!( first_name: "Cody", last_name: "Rumor ", email:"cody@gmail.com", password: "123456", profile: "I love Asian cuisine especially Thai! Love exploring new restaurant, come join me!")
+sherwin = User.create!( first_name: "Sherwin", last_name: "Rumor ", email:"sherwin@gmail.com", password: "123456", profile: "I love rice! (not stereotyping but just my personal pereference🤭)")
 tony = User.create!( first_name: "Tony", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "I love fast food! KFC, McDonald's, Taco Bell, you ")
+carmen = User.create!( first_name: "Carmen", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "Hola! Cumo esta! I'm from Barcelona! I'm studying organic make-up in Berlin. Would like to meet new people!")
+
 
 puts 'Creating Events'
 # Event
@@ -65,9 +78,8 @@ event_20 = Event.create!(user: juan, event_name: "It's a Pizza!", cuisine: "Ital
 event_21 = Event.create!(user: ronald, event_name: "Schwarma and Felafel on the Tafel", cuisine: "Lebanese", description: "Plates there are cheap and super tasty, come and join!", restaurant_name: "Babel", restaurant_address: "Kastanienallee 33, 10435 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("13/03/2020 18:30"), end_time: DateTime.parse("13/03/2020 19:30"), spots: 3 )
 event_22 = Event.create!(user: rahim, event_name: "Yoga and Veg lovers", cuisine: "Vegetarian", description: "Cozy and tasty food, come have a try!", restaurant_name: "Yoga Leben e.V. /Vielfalter", restaurant_address: "Brunnenstraße 147, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 20:00"), spots: 3 )
 event_23 = Event.create!(user: azadeh, event_name: "Quick dinner before the party", cuisine: "German", description: "Let's get some food and first wine glasses before the party!", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 76/77, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
-event_24 = Event.create!(user: michael, event_name: "Quick dinner before the party", cuisine: "German", description: "Let's get some food and first wine glasses before the party!", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 76/77, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
+event_24 = Event.create!(user: tony, event_name: "I'm lovin' it🍟", cuisine: "Fast food", description: "I love McNuggets. Don't judge. 🍔", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 4, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
 
-# Brunnenstraße 49, 10115 Berlin
 puts 'Creating Bookings'
 # Booking
 booking_1 = Booking.create!( event: event_1, user: mark ) #pasta
@@ -257,6 +269,21 @@ images_user.each_with_index do |image, index|
   file = URI.open(image)
   users[index].photo.attach(io: file, filename: 'profile_pic.jpg', content_type: 'image/jpg')
 end
+
+tony.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/tony_hcmygs.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+serenity.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/serenity_g7xj5z.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+janice.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/janice_qdicqt.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+alessandro.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031591/User%20Pictures/ale_krftlq.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+alice.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031593/User%20Pictures/alice_yncbyn.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+mancy.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031591/User%20Pictures/mancy2_wufliq.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+felix.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031591/User%20Pictures/felix_su2unw.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+clem.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/clem_kwlp4a.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+burak.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/burak_fr8eil.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+cody.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/cody_gb6ajl.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+sherwin.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/sherwin_iepnuu.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+tony.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/tony_hcmygs.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+carmen.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/carmen_ocjycl.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
+
 
 puts "Finished"
 puts "Now you have #{User.all.count} users, #{Event.all.count} events, and #{Booking.all.count} bookings"
