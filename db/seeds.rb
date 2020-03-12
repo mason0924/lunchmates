@@ -23,7 +23,7 @@ mattia = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@g
 mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Came straight from NYC couple of months ago, show me around :8")
 caro = User.create!( first_name: "Caro", last_name: "Jen", email:"caro@gmail.com", password: "123456", profile: "Hamburgerin Berlin based! ")
 emma = User.create!( first_name: "Emma", last_name: "Cole", email:"ebony@gmail.com", password: "123456", profile: "Just moved here from Norway, let's go swimming after lunch")
-jenny = User.create!( first_name: "jenny", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Would like to meet new peeps in this big city, just please let's not talk about work during lunch")
+jenny = User.create!( first_name: "Jenny", last_name: "King", email:"riri@gmail.com", password: "123456", profile: "Would like to meet new peeps in this big city, just please let's not talk about work during lunch")
 raja = User.create!( first_name: "Raja", last_name: "Kash", email:"raja@gmail.com", password: "123456", profile: "Love travelling, nature and coding. Tell me your stories in front of a good dish")
 tako = User.create!( first_name: "Tako", last_name: "Hiroki", email:"tako@gmail.com", password: "123456", profile: "Just started my BA in Biology here, would like to meet some people with total different interests tho")
 sam = User.create!( first_name: "Sam", last_name: "Smith", email:"sam@gmail.com", password: "123456", profile: "IT MA student here. Pull me out of my cubicle!")
@@ -32,12 +32,13 @@ ronald = User.create!( first_name: "Ronald", last_name: "Donald", email:"ronald@
 eva = User.create!( first_name: "Eva", last_name: "Vida", email:"eva@gmail.com", password: "123456", profile: "What are your nicest experiences in Berlin so far? Let's get to know each other and create more")
 kenny = User.create!( first_name: "Kenny", last_name: "Manny", email:"kenny@gmail.com", password: "123456", profile: "Pizza addicted, can show you the best in town")
 rahim = User.create!( first_name: "Rahim", last_name: "Mat", email:"rahim@gmail.com", password: "123456", profile: "Straight from Mombai, just for some months - how me the best indian places")
-mark = User.create!( first_name: "mark", last_name: "Cruz", email:"mark@gmail.com", password: "123456", profile: "Aloha from Mexico! Up for some lunch together, and for a Mezcal margherita afterwards!")
+mark = User.create!( first_name: "Mark", last_name: "Cruz", email:"mark@gmail.com", password: "123456", profile: "Aloha from Mexico! Up for some lunch together, and for a Mezcal margherita afterwards!")
 maria = User.create!( first_name: "Maria", last_name: "Rose", email:"maria@gmail.com", password: "123456", profile: "I love travelling and trying other culture's food. Show me the weirdest restaurants around")
 fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatimah@gmail.com", password: "123456", profile: "Hi, I'm 20 year old and I'm new in Berlin 😊")
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Like to meet new people every day, let's eat a Döner in the park!")
 juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hey! working in a coworking space close to Stadtmitte, keen to meet other freelancers around")
 thomas = User.create!( first_name: "Thomas", last_name: "Starzynski ", email:"thomas@gmail.com", password: "123456", profile: "I love Pjelmjeni")
+tony = User.create!( first_name: "Tony", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "I love fast food! KFC, McDonald's, Taco Bell, you ")
 
 puts 'Creating Events'
 # Event
@@ -64,7 +65,9 @@ event_20 = Event.create!(user: juan, event_name: "It's a Pizza!", cuisine: "Ital
 event_21 = Event.create!(user: ronald, event_name: "Schwarma and Felafel on the Tafel", cuisine: "Lebanese", description: "Plates there are cheap and super tasty, come and join!", restaurant_name: "Babel", restaurant_address: "Kastanienallee 33, 10435 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("13/03/2020 18:30"), end_time: DateTime.parse("13/03/2020 19:30"), spots: 3 )
 event_22 = Event.create!(user: rahim, event_name: "Yoga and Veg lovers", cuisine: "Vegetarian", description: "Cozy and tasty food, come have a try!", restaurant_name: "Yoga Leben e.V. /Vielfalter", restaurant_address: "Brunnenstraße 147, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 20:00"), spots: 3 )
 event_23 = Event.create!(user: azadeh, event_name: "Quick dinner before the party", cuisine: "German", description: "Let's get some food and first wine glasses before the party!", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 76/77, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
+event_24 = Event.create!(user: michael, event_name: "Quick dinner before the party", cuisine: "German", description: "Let's get some food and first wine glasses before the party!", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 76/77, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
 
+# Brunnenstraße 49, 10115 Berlin
 puts 'Creating Bookings'
 # Booking
 booking_1 = Booking.create!( event: event_1, user: mark ) #pasta

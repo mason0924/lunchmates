@@ -7,5 +7,19 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :events
   has_many :bookings
-  enum preference: ["Italian", "Fast food", "Japanese", "Middle Eastern", "German", "Vegetarian", "Indian", "New American"]
+  enum preference: [
+    "Chinese",
+    "Fast food",
+    "German",
+    "Greek",
+    "Indian",
+    "Italian",
+    "Japanese",
+    "Lebanese",
+    "Middle Eastern",
+    "New American",
+    "Vegan",
+    "Vegetarian"
+  ]
 end
+
