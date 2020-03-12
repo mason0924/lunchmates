@@ -5,9 +5,11 @@
       <%= cl_image_tag photo.key, height: 200, crop: :fill %>
     <% end %>
   <% end %>
+  <div >
+    <br>
+    <h3><%= link_to event.restaurant_name, event_path(event) %></h2>
+  </div>
+  <div  >
+    <p><%= event.restaurant_address %></p>
+  </div>
 </div>
-
-<h2><%= link_to event.restaurant_name, event_path(event) %></h2>
-<p><%= event.restaurant_address %></p>
-
-
