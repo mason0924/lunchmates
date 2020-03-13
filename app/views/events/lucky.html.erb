@@ -30,9 +30,9 @@
      <div>
      <div class="match-msg">
       <br>
-        <p><strong><%= @user.first_name %></strong> is also going to <i><strong><%= @event.restaurant_name %></i></strong> for lunch!
+        <p><strong><%= @user.first_name %></strong> is  going to <strong><%= @event.restaurant_name %></strong> for lunch.
         Both of you love <strong><i><%= current_user.preference.downcase %></i></strong> cuisine!
-        You guys should totally sit together. </p>
+        You guys should totally sit together! </p>
         <p>Click “Yes” to join the lunch!</p>
      </div>
       <%= link_to "Yes!", event_path(@event.id), class: "btn btn-custom", id: "yes-button"%>
