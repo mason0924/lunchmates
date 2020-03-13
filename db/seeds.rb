@@ -128,7 +128,7 @@ booking_30 = Booking.create!( event: event_24, user: clem )
 booking_31 = Booking.create!( event: event_25, user: carmen ) #divalicious
 booking_32 = Booking.create!( event: event_25, user: mancy )
 
-booking_33 = Booking.create!( event: event_20, user: mattia ) #pizza
+booking_33 = Booking.create!( event: event_20, user: mana ) #pizza
 booking_34 = Booking.create!( event: event_20, user: azadeh )
 booking_35 = Booking.create!( event: event_20, user: mason )
 
