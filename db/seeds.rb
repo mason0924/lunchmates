@@ -38,7 +38,7 @@ fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatim
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Like to meet new people every day, let's eat a Döner in the park!", preference:"Italian")
 juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hey! working in a coworking space close to Stadtmitte, keen to meet other freelancers around",preference:"Italian")
 thomas = User.create!( first_name: "Thomas", last_name: "Starzynski ", email:"thomas@gmail.com", password: "123456", profile: "I'm the best T.A 😎", preference:"Fast food")
-serenity = User.create!( first_name: "Serenity", last_name: "Gon ", email:"serenity@gmail.com", password: "123456", profile: "I used to be a vegetarian, but not anymore!😎", preference:"Fast food")
+serenity = User.create!( first_name: "Serenity", last_name: "Gon ", email:"serenity@gmail.com", password: "123456", profile: "I am a vegetarian!😎", preference:"Fast food")
 janice = User.create!( first_name: "Janice", last_name: "paik ", email:"janice@gmail.com", password: "123456", profile: "I'm from L.A. I'm super friendly and love taking care people around me.😎", preference:"Italian")
 alessandro = User.create!( first_name: "alessandro", last_name: "Rumor ", email:"alessandro@gmail.com", password: "123456", profile: "I'm an Italian. Italian food in Berlin are terrible. But some pizzas are fine, CAPISH?", preference:"Italian")
 alice = User.create!( first_name: "Alice", last_name: "Rumor ", email:"alice@gmail.com", password: "123456", profile: "I'm a fashion photographer. Came to Berlin to work for Zalando. I know my italian food.💅", preference:"Italian")
@@ -72,13 +72,13 @@ event_15 = Event.create!(user: clem, event_name: "A plate in Slate", cuisine: "N
 event_16 = Event.create!(user: felix, event_name: "Spring is coming, let's go South", cuisine: "Greek", description: "By warmer weather and sunnier days, a glass of wine with good Mediterranean food is perfect", restaurant_name: "Hinterhof", restaurant_address: "Chausseestraße 122, 10115 Berlin", restaurant_price_range: 3, start_time: DateTime.parse("13/03/2020 18:00"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6)
 event_17 = Event.create!(user: janice, event_name: "Tongue yoga", cuisine: "Vegan", description: "I found this restaurant called as the yoga practice. Join me for some chillier training!", restaurant_name:"Jivamukti", restaurant_address: "Brunnenstraße 29, 10119 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 17:30"), end_time: DateTime.parse("13/03/2020 19:30"), spots: 5 )
 event_18 = Event.create!(user: alice, event_name: "Going for some suhi, wanna join?", cuisine: "Japanese", description: "Join the neighborhood if in mood for fresh food", restaurant_name: "Aiko", restaurant_address: "Brunnenstraße 193, 10119 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
-event_19 = Event.create!(user: mattia, event_name: "I'll be clear, we need Burgers and Beer, in here", cuisine: "Fast Food", description: "Fatty juicy Burgers, also Vegan!", restaurant_name: "Tommis Burger Joint", restaurant_address: "Invalidenstraße 160, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 20:00"), spots: 3 )
-event_20 = Event.create!(user: alessandro, event_name: "It's a Pizza!", cuisine: "Italian", description: "Pizza is good here, join me for a food rampage!", restaurant_name: "Papa Pane di Sorrento", restaurant_address: "Ackerstraße 23, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:15"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 5 )
+event_19 = Event.create!(user: alessandro, event_name: "I'll be clear, we need Burgers and Beer, in here", cuisine: "Fast Food", description: "Fatty juicy Burgers, also Vegan!", restaurant_name: "Tommis Burger Joint", restaurant_address: "Invalidenstraße 160, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 20:00"), spots: 3 )
+event_20 = Event.create!(user: mattia, event_name: "It's a Pizza!", cuisine: "Italian", description: "Pizza is good here, join me for a food rampage!", restaurant_name: "Papa Pane di Sorrento", restaurant_address: "Ackerstraße 23, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:15"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 5 )
 event_21 = Event.create!(user: cody, event_name: "Schwarma and Felafel on the Tafel", cuisine: "Lebanese", description: "Plates there are cheap and super tasty, come and join!", restaurant_name: "Babel", restaurant_address: "Kastanienallee 33, 10435 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("13/03/2020 18:30"), end_time: DateTime.parse("13/03/2020 19:30"), spots: 3 )
 event_22 = Event.create!(user: carmen, event_name: "Yoga and Veg lovers", cuisine: "Vegan", description: "Cozy and tasty food, come have a try!", restaurant_name: "Yoga Leben e.V. /Vielfalter", restaurant_address: "Brunnenstraße 147, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 19:00"), end_time: DateTime.parse("13/03/2020 20:00"), spots: 3 )
 event_23 = Event.create!(user: azadeh, event_name: "Quick dinner before the party", cuisine: "German", description: "Let's get some food and first wine glasses before the party!", restaurant_name: "Factory Kitchen Berlin", restaurant_address: "Rheinsberger Str. 76/77, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 6 )
 event_24 = Event.create!(user: tony, event_name: "I'm lovin' it🍟", cuisine: "Fast food", description: "I love McNuggets. Don't judge 🍔", restaurant_name: "Mcdonald's", restaurant_address: "Rheinsberger Str. 4, 10115 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
-event_25 = Event.create!(user: serenity, event_name: "Fancy Salad 🥗", cuisine: "Vegetarian", description: "On my cheat day. I want a salad 🥗", restaurant_name: "Diva Salad", restaurant_address: "Strelitzer Str. 60, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
+event_25 = Event.create!(user: serenity, event_name: "Fancy Salad 🥗", cuisine: "Vegetarian", description: "On my cheat day. I want a salad 🥗", restaurant_name: "Divalicious", restaurant_address: "Strelitzer Str. 60, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
 
 puts 'Creating Bookings'
 # Booking
@@ -123,11 +123,14 @@ booking_25 = Booking.create!( event: event_12, user: tako )#busine
 booking_27 = Booking.create!( event: event_13, user: tako )#mcd
 
 booking_29 = Booking.create!( event: event_24, user: burak )#mcd tony
-booking_30 = Booking.create!( event: event_24, user: mancy )
+booking_30 = Booking.create!( event: event_24, user: clem )
 
-booking_30 = Booking.create!( event: event_25, user: carmen )
-booking_30 = Booking.create!( event: event_25, user: caro )
+booking_31 = Booking.create!( event: event_25, user: carmen ) #divalicious
+booking_32 = Booking.create!( event: event_25, user: mancy )
 
+booking_33 = Booking.create!( event: event_20, user: mattia ) #pizza
+booking_34 = Booking.create!( event: event_20, user: azadeh )
+booking_35 = Booking.create!( event: event_20, user: mason )
 
 
 
