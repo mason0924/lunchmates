@@ -31,13 +31,8 @@
     bottom: 20px;
   }
   &.disabled, &:disabled {
+    color: rgb(189, 189, 189);
     background: #808080;
-    border: 1px solid #808080;
-    cursor: unset;
-    /*Override hover*/
-    &:hover {
-      color: white;
-    }
   }
 }
 
