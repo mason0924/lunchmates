@@ -12,6 +12,10 @@ class EventsController < ApplicationController
     if params[:cuisine].present?
       @events = @events.where(cuisine: params[:cuisine])
     end
+
+    # @events = @events.where("start_time >= ?", DateTime.now) # filter out past event
+    # @events = @events.order(start_time: :desc) # sort events by date, in reverse
+
     @markers = @events.map do |event|
       {
         lat: event.latitude,

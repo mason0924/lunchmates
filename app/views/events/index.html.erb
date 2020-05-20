@@ -30,7 +30,7 @@
 
     <% @events.each do |event| %>
       <%= link_to event_path(event) do  %>
-        <div class="card-custom d-flex">
+        <div class="card-custom d-flex <%= " disabled" if event.start_time < DateTime.now %>">
           <div class="card-image flex-shrink-0">
           <% if event.photos.attached? %>
             <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill, class: "w-100 h-100" %>

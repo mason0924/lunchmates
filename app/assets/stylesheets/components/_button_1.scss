@@ -23,7 +23,17 @@
   font-family: 'Rubik', sans-serif;
   width:100%;
   &:hover {
-    color:#808080;
+    color:white;
+    background: linear-gradient(90deg, rgba(255,168,146,1) 0%, rgba(217,197,255,1) 50%, rgba(255,168,146,1) 100%);
+  }
+  &.disabled, &:disabled {
+    background: #808080;
+    border: 1px solid #808080;
+    cursor: unset;
+    /*Override hover*/
+    &:hover {
+      color: white;
+    }
   }
 }
 
