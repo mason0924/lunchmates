@@ -39,11 +39,9 @@
         </li>
         
         <%= link_to edit_user_registration_path do %>
-          <% imagelink = current_user.photo.attached? ? current_user.photo.key : "https://res.cloudinary.com/lunchmates/image/upload/v1590168040/User%20Pictures/default-avatar-images_uiehqp.png" %>
-          <%= cl_image_tag imagelink, crop: :fit, class: "avatar dropdown-toggle" %>
+          <%= cl_image_tag current_user.get_photo_url, crop: :fit, class: "avatar dropdown-toggle" %>
         <% end %>
-        <%#= link_to image_tag(current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle", id: "navbarDropdown", data:), edit_user_registration_path %>
-
+        
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>

@@ -16,17 +16,13 @@
 </div>
     <div class="col-12">
       <h2> You guys should sit together!</h2>
-        <% if @user.photo.attached? %>
-          <%= link_to user_path(@user) do %>
-            <%= cl_image_tag @user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2 left-avatar"%>
-          <% end %>
-        <% end %>
+      <%= link_to user_path(@user) do %>
+        <%= cl_image_tag @user.get_photo_url, width: 150, height: 150, crop: :fill, class: "avatar2 left-avatar"%>
+      <% end %>
 
-        <% if @current_user.photo.attached? %>
-          <%= link_to user_path(@current_user) do %>
-            <%= cl_image_tag @current_user.photo.key, width: 150, height: 150, crop: :fill, class: "avatar2 right-avatar"%>
-          <% end %>
-        <% end %>
+      <%= link_to user_path(@current_user) do %>
+        <%= cl_image_tag @current_user.get_photo_url, width: 150, height: 150, crop: :fill, class: "avatar2 right-avatar"%>
+      <% end %>
      <div>
      <div class="match-msg">
       <br>
