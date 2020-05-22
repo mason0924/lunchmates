@@ -13,9 +13,21 @@ class EventsController < ApplicationController
       @events = @events.where(cuisine: params[:cuisine])
     end
 
-    # @events = @events.where("start_time >= ?", DateTime.now) # filter out past event
-    # @events = @events.order(start_time: :desc) # sort events by date, in reverse
+    # to select all attributes, cause .select override
+    @events = @events.select("*")
 
+    # calculate the absolute (all numbers become positive) time difference between event date from current time
+    @events = @events.select("abs(EXTRACT(epoch FROM start_time - current_timestamp)) AS time_diff")
+    
+    # calculate which one is past event, converted to 1 = past event, 0 = future event
+    @events = @events.select("start_time < current_timestamp AS past")
+    
+    # order by future event first, as 0 = future event, 1 = past event
+    @events = @events.order("past" => :asc)
+
+    # order by absolute time different
+    @events = @events.order("time_diff" => :asc)
+    
     @markers = @events.map do |event|
       {
         lat: event.latitude,
