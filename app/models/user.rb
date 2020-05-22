@@ -7,6 +7,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :events
   has_many :bookings
-  enum preference: ["Chinese","Fast food","German","Greek","Indian","Italian","Japanese","Lebanese","Middle Eastern","New American","Vegan","Vegetarian"]
+  enum preference: ["Chinese","Dessert","Fast food","German","Greek","Indian","Italian","Japanese","Lebanese","Middle Eastern","New American","Vegan","Vegetarian"]
+  validates_attachment_content_type :photo, :content_type => /\Aimage\/.*\Z/
 end
 
