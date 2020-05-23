@@ -31,7 +31,7 @@
           </div>
         <p class="mt-4 mb-0">Host: <strong> <%= @event.user.first_name %></p></strong>
          <%= link_to user_path(@host) do %>
-            <%= cl_image_tag @event.user.get_photo_url, width: 200, crop: :fill, class: "avatar" %>
+            <%= cl_image_tag @event.user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar" %>
         <% end %>
         <br>
         <p class="mb-0 mt-3"><strong>Guests: </strong></p>
@@ -39,7 +39,7 @@
            <% Booking.joins(:event).where(event: @event).each do |booking|  %>
             <div class="mx-1">
               <p class=" text-center mb-0"><%= booking.user.first_name %></p>
-                <%= cl_image_tag booking.user.get_photo_url, width: 200, crop: :fill, class: "avatar" %>
+                <%= cl_image_tag booking.user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar" %>
               </div>
             <% end %>
         </div>

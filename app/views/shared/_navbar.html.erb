@@ -39,7 +39,7 @@
         </li>
         
         <%= link_to edit_user_registration_path do %>
-          <%= cl_image_tag current_user.get_photo_url, crop: :fit, class: "avatar dropdown-toggle" %>
+          <%= cl_image_tag current_user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar dropdown-toggle" %>
         <% end %>
         
       <% else %>
