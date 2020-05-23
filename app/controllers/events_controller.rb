@@ -13,22 +13,22 @@ class EventsController < ApplicationController
       @events = @events.where(cuisine: params[:cuisine])
     end
 
-    # to select all attributes, cause .select override
-    @events = @events.select("*")
+    # select future events from events
+    @future_events = @events.where("start_time >= current_timestamp")
 
-    # calculate the absolute (all numbers become positive) time difference between event date from current time
-    @events = @events.select("abs(EXTRACT(epoch FROM start_time - current_timestamp)) AS time_diff")
-    
-    # calculate which one is past event, converted to 1 = past event, 0 = future event
-    @events = @events.select("start_time < current_timestamp AS past")
-    
-    # order by future event first, as 0 = future event, 1 = past event
-    @events = @events.order("past" => :asc)
+    # order time in descending order, latest shown first
+    @future_events = @future_events.order(start_time: :asc)
 
-    # order by absolute time different
-    @events = @events.order("time_diff" => :asc)
-    
-    @markers = @events.map do |event|
+    if params[:show_past].present?
+      # select past events from events
+      @past_events = @events.where("start_time < current_timestamp")
+
+      # order time in descending order, latest shown first
+      @past_events = @past_events.order(start_time: :desc)
+    end
+
+    # map only future events
+    @markers = @future_events.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,
@@ -88,7 +88,26 @@ class EventsController < ApplicationController
   end
 
   def lucky
-    @event = Event.where(cuisine: current_user.preference).sample
+    # TODO: filter out past event, if no event, should show "sorry no event" message
+    # select only those users with preference
+    @event = Event.where(cuisine: current_user.preference)
+
+    # count total results in query
+    count = @event.count
+
+    # replace query with all, as no events with preference type
+    if count == 0
+      @event = Event
+      count = @event.count
+    end
+
+
+    # generate random number between 0 to count
+    offset = rand(count)
+
+    # select the first result with offset
+    @event = @event.offset(offset).first
+
     authorize @event
     @user = @event.user # The person you can sit next to :)
   end
