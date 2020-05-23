@@ -40,7 +40,7 @@
         
         <%= link_to edit_user_registration_path do %>
           <% if current_user.photo.attached? %>
-          <%= cl_image_tag current_user.photo.key, crop: :fit, class: "avatar dropdown-toggle"%>
+          <%= cl_image_tag current_user.photo.key, width: 200, height: 200, crop: :fill, class: "avatar dropdown-toggle"%>
             </li>
           <% end %>
           <% end %>
