@@ -41,7 +41,6 @@
         <%= link_to edit_user_registration_path do %>
           <%= cl_image_tag current_user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar dropdown-toggle" %>
         <% end %>
-        
       <% else %>
         <li class="nav-item">
           <%= link_to "Login", new_user_session_path, class: "nav-link" %>
