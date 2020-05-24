@@ -12,7 +12,23 @@ class EventsController < ApplicationController
     if params[:cuisine].present?
       @events = @events.where(cuisine: params[:cuisine])
     end
-    @markers = @events.map do |event|
+
+    # select future events from events
+    @future_events = @events.where("start_time >= current_timestamp")
+
+    # order time in descending order, latest shown first
+    @future_events = @future_events.order(start_time: :asc)
+
+    if params[:show_past].present?
+      # select past events from events
+      @past_events = @events.where("start_time < current_timestamp")
+
+      # order time in descending order, latest shown first
+      @past_events = @past_events.order(start_time: :desc)
+    end
+
+    # map only future events
+    @markers = @future_events.map do |event|
       {
         lat: event.latitude,
         lng: event.longitude,

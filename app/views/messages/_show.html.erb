@@ -1,8 +1,6 @@
 <div class="message>
   <p class="message-writer">
-  <% if message.user.photo.attached? %>
-  <%= cl_image_tag message.user.photo.key, width: 30, crop: :fill, class: "avatar-3" %>
-  <% end %>
+  <%= cl_image_tag message.user.get_photo_url, width: 30, height: 30, crop: :fill, class: "avatar-3" %>
   <%=  message.user.first_name%>: <%=  message.content%>
     <br>
     <span class="message-time">at <%= message.created_at.strftime("%e %b %Y %l:%M %P") %></span>

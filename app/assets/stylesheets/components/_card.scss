@@ -30,6 +30,10 @@
     right: 25px;
     bottom: 20px;
   }
+  &.disabled, &:disabled {
+    color: rgb(189, 189, 189);
+    background: #808080;
+  }
 }
 
 .card-custom:active {
