@@ -72,7 +72,26 @@ class EventsController < ApplicationController
   end
 
   def lucky
-    @event = Event.where(cuisine: current_user.preference).sample
+    # TODO: filter out past event, if no event, should show "sorry no event" message
+    # select only those users with preference
+    @event = Event.where(cuisine: current_user.preference)
+
+    # count total results in query
+    count = @event.count
+
+    # replace query with all, as no events with preference type
+    if count == 0
+      @event = Event
+      count = @event.count
+    end
+
+
+    # generate random number between 0 to count
+    offset = rand(count)
+
+    # select the first result with offset
+    @event = @event.offset(offset).first
+
     authorize @event
     @user = @event.user # The person you can sit next to :)
   end
