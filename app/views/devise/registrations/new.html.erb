@@ -19,7 +19,7 @@
                 autofocus: true,
                 input_html: { autocomplete: "profile picture" }%>
 
- <%= f.input :preference, :collection => User.preferences%>
+ <%= f.input :preference, :collection => User.preferences, value_method: :first %>
  
   <%= f.input :email,
               required: true,
