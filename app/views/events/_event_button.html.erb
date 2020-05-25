@@ -1,0 +1,14 @@
+<%= link_to event_path(event_button) do  %>
+  <div class="card-custom d-flex<%= event_button.start_time < DateTime.now ? " disabled" : "" %>">
+    <div class="card-image flex-shrink-0">
+    <% if event_button.photos.attached? %>
+      <%= cl_image_tag event_button.photos.first.key, width: 100, height: 100, crop: :fill, class: "w-100 h-100" %>
+    <% end %>
+    </div>
+    <div class="lockup">
+      <h5 class="card-title"><%= event_button.event_name %></h5>
+      <p class="card-subtitle"> At <%= event_button.restaurant_name %></p>
+      <p class="date card-description"> At <%= event_button.start_time.strftime("%e %b %Y %H:%M")%> - <%=event_button.end_time.strftime("%H:%M")%> </p>
+    </div>
+  </div>
+<% end %>
