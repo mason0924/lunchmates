@@ -10,4 +10,5 @@ class Event < ApplicationRecord
   validates :start_time, presence: true
   validates :end_time, presence: true
   validates :spots, presence: true
+  validates :cuisine, presence: true
 end
