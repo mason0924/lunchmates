@@ -21,7 +21,7 @@
 
         <h6><strong><%= '<i class="far fa-calendar-alt"></i>'.html_safe %>  <%= @event.start_time.strftime("%e %b %Y") %> </strong></h6>
         <h6><strong><%= '<i class="far fa-clock"></i>'.html_safe %> <%= @event.start_time.strftime("%H:%M")%> to <%=@event.end_time.strftime("%H:%M")%></strong></h6>
-
+        <h6><strong><%= '<i class="fas fa-utensils"></i>'.html_safe %> <%= @event.cuisine %></strong></p>
         <h6><strong><%= '<i class="fas fa-money-bill-wave"></i>'.html_safe %> <%= "€" * @event.restaurant_price_range %></strong></p>
       </div>
 
