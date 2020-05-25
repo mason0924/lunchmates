@@ -7,6 +7,11 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
+  # to stop redirect user after edit
+  as :user do
+    get 'users/edit', :to => 'devise/registrations#edit', :as => :user_root
+  end
+
   resources :users, only: [:show]
   resources :bookings, only: [:destroy]
   # resources :dashboards, only: [:index, :show]
