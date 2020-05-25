@@ -88,28 +88,33 @@ class EventsController < ApplicationController
   end
 
   def lucky
-    # TODO: filter out past event, if no event, should show "sorry no event" message
-    # select only those users with preference
-    @event = Event.where(cuisine: current_user.preference)
+    # select only future events
+    @event = Event.where("start_time >= current_timestamp")
+
+    # select only those users with preference as priority
+    @event_pref = @event.where(cuisine: current_user.preference)
 
     # count total results in query
-    count = @event.count
+    count = @event_pref.count
 
     # replace query with all, as no events with preference type
-    if count == 0
-      @event = Event
-      count = @event.count
+    if count > 0
+      @event = @event_pref
     end
 
+    count = @event.count
 
-    # generate random number between 0 to count
-    offset = rand(count)
+    if count > 0
+      # generate random number between 0 to count
+      offset = rand(count)
 
-    # select the first result with offset
-    @event = @event.offset(offset).first
+      # select the first result with offset
+      @event = @event.offset(offset).first
 
+      @user = @event.user # The person you can sit next to :)
+    end
+    
     authorize @event
-    @user = @event.user # The person you can sit next to :)
   end
 
   private

@@ -1,9 +1,11 @@
-#lucky-button{
+#lucky-button {
   // height: 10em;
   border-radius: 8px;
   font-size: 40px;
-  position: relative;
   margin: 0;
+}
+
+.center {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,7 +13,7 @@
   transform: translate(-50%, -50%);
 }
 
-#lucky-button{
+#lucky-button {
 animation: 2s linear infinite condemned_blink_effect;
 }
 
