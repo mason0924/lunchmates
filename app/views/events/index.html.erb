@@ -34,24 +34,32 @@
 
       <div>
         <h5>Happening soon</h5>
-        <% @future_events.each do |event| %>
-          <%= link_to event_path(event) do  %>
-            <div class="card-custom d-flex">
-            <div class="card-image flex-shrink-0">
-              <% if event.photos.attached? %>
-                <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill, class: "w-100 h-100" %>
-              <% end %>
+        <% if defined? @future_events and @future_events.length > 0 %>
+          <% @future_events.each do |event| %>
+            <%= link_to event_path(event) do  %>
+              <div class="card-custom d-flex">
+              <div class="card-image flex-shrink-0">
+                <% if event.photos.attached? %>
+                  <%= cl_image_tag event.photos.first.key, width: 100, height: 100, crop: :fill, class: "w-100 h-100" %>
+                <% end %>
+              </div>
+              <div class="lockup">
+                <h5 class="card-title"><%= event.event_name %></h5>
+                <p class="card-subtitle"> At <%= event.restaurant_name %></p>
+                <p class="date card-description"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
+              </div>
             </div>
-            <div class="lockup">
-              <h5 class="card-title"><%= event.event_name %></h5>
-              <p class="card-subtitle"> At <%= event.restaurant_name %></p>
-              <p class="date card-description"> At <%= event.start_time.strftime("%e %b %Y %H:%M")%> - <%=event.end_time.strftime("%H:%M")%> </p>
-            </div>
-          </div>
+            <% end %>
           <% end %>
+        <% else %>
+          <div style="text-align: center; margin: 50px">
+            <h5><em>Currently there is no event near you at this time, why not create one?</em></h5>
+            <%= link_to "Create", new_event_path, class: "btn btn-custom px-4 py-2" %>
+          </div>
         <% end %>
       </div>
 
+      <% if defined? @past_events and @past_events.length > 0 %>
       <div>
         <h5>Past events</h5>
         <% @past_events.to_a.each do |event| %>
@@ -72,6 +80,7 @@
         <% end %>
       </div>
     </div>
+    <% end %>
 
     <div
       id="map"
