@@ -17,7 +17,7 @@ User.destroy_all
 
 puts 'Creating Users'
 # User
-mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Came straight from NYC couple of months ago, show me around 😊", preference:"Vegetarian")
+mason = User.create!( first_name: "Mason", last_name: "Tan", email:"mason@gmail.com", password: "123456", profile: "Finally back in New York City and got vaccinated! I'm covid-free and can't wait to meet new friends! 😊", preference:"Vegetarian")
 azadeh = User.create!( first_name: "Azadeh", last_name: "Aram", email:"azadeh@gmail.com", password: "123456", profile: "Hey! I just arrived here in Berlin to study coding, want to explore the city and meet new people:)", preference:"Italian")
 mana = User.create!( first_name: "Mana", last_name: "Jalili", email:"mana@gmail.com", password: "123456", profile: "In Berlin since a bit already, and hapy to show the little gems I found!", preference:"Italian")
 mattia = User.create!( first_name: "Mattia", last_name: "Macor", email:"mattia@gmail.com", password: "123456", profile: "Just started a new job here, let's hang out and discover new places:)", preference:"Italian")
@@ -38,18 +38,18 @@ fatimah = User.create!( first_name: "Fatimah", last_name: "Hazmah", email:"fatim
 rosmah = User.create!( first_name: "Rosmah", last_name: "Ali", email:"rosmah@gmail.com", password: "123456", profile: "Like to meet new people every day, let's eat a Döner in the park!", preference:"Italian")
 juan = User.create!( first_name: "Juan", last_name: "Carlos", email:"juan@gmail.com", password: "123456", profile: "Hey! working in a coworking space close to Stadtmitte, keen to meet other freelancers around",preference:"Italian")
 thomas = User.create!( first_name: "Thomas", last_name: "Starzynski ", email:"thomas@gmail.com", password: "123456", profile: "I'm the best T.A 😎", preference:"Fast food")
-serenity = User.create!( first_name: "Serenity", last_name: "Gon ", email:"serenity@gmail.com", password: "123456", profile: "I am a vegetarian!😎", preference:"Fast food")
+serenity = User.create!( first_name: "Serenity", last_name: "Gon ", email:"serenity@gmail.com", password: "123456", profile: "I work as a nurse and I'm no longer a vegetarian!😎", preference:"Fast food")
 janice = User.create!( first_name: "Janice", last_name: "paik ", email:"janice@gmail.com", password: "123456", profile: "I'm from L.A. I'm super friendly and love taking care people around me.😎", preference:"Italian")
-alessandro = User.create!( first_name: "alessandro", last_name: "Rumor ", email:"alessandro@gmail.com", password: "123456", profile: "I'm an Italian. Italian food in Berlin are terrible. But some pizzas are fine, CAPISH?", preference:"Italian")
-alice = User.create!( first_name: "Alice", last_name: "Rumor ", email:"alice@gmail.com", password: "123456", profile: "I'm a fashion photographer. Came to Berlin to work for Zalando. I know my italian food.💅", preference:"Italian")
-mancy = User.create!( first_name: "Mancy", last_name: "Liang ", email:"mancy@gmail.com", password: "123456", profile: "I know I can make good chinese food but I also love eating out, cuz I hate washing dishes.", preference:"Italian")
-felix = User.create!( first_name: "Felix", last_name: "Rumor ", email:"felix@gmail.com", password: "123456", profile: "I'm from Germany. I love tea. I love beer.", preference:"Italian")
+alessandro = User.create!( first_name: "alessandro", last_name: "Rumor ", email:"alessandro@gmail.com", password: "123456", profile: "I'm an Italian. Italian food outside of Italy are terrible. But maybe some pizzas are fine, CAPISH?", preference:"Italian")
+alice = User.create!( first_name: "Alice", last_name: "Rumor ", email:"alice@gmail.com", password: "123456", profile: "I'm a fashion photographer. Came to NYC to work for Vogue. I know my italian food.💅", preference:"Italian")
+mancy = User.create!( first_name: "Mancy", last_name: "Liang ", email:"mancy@gmail.com", password: "123456", profile: "Prefer men taller me when I have lunch", preference:"Italian")
+felix = User.create!( first_name: "Felix", last_name: "Rumor ", email:"felix@gmail.com", password: "123456", profile: "I'm from Germany. I love tea & beer. Recently moved into NYC with my husband.", preference:"Italian")
 clem = User.create!( first_name: "Clem", last_name: "Rumor ", email:"clem@gmail.com", password: "123456", profile: "I graduate from NYU Business School. I love all kind of cuisine, especially sushi.", preference:"Italian")
 burak = User.create!( first_name: "Burak", last_name: "Rumor ", email:"burak@gmail.com", password: "123456", profile: "I'm a young professional. Usually my lunch is quite fancy tbh.", preference:"Fast food")
 cody = User.create!( first_name: "Cody", last_name: "Rumor ", email:"cody@gmail.com", password: "123456", profile: "I love Asian cuisine especially Thai! Love exploring new restaurant, come join me!",  preference:"Fast food")
-sherwin = User.create!( first_name: "Sherwin", last_name: "Rumor ", email:"sherwin@gmail.com", password: "123456", profile: "I love rice! (not stereotyping but just my personal pereference🤭)",  preference:"Fast food")
-tony = User.create!( first_name: "Tony", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "I'm new in Berlin and I love currywurst! 💅",  preference:"Fast food")
-carmen = User.create!( first_name: "Carmen", last_name: "Rumor ", email:"carmen@gmail.com", password: "123456", profile: "Hola! Cumo esta! I'm from Barcelona! I'm studying organic make-up in Berlin. Would like to meet new people!",  preference:"Italian")
+sherwin = User.create!( first_name: "Sherwin", last_name: "Rumor ", email:"sherwin@gmail.com", password: "123456", profile: "I love rice! (not stereotyping but just my personal pereference LOL🤭)",  preference:"Fast food")
+tony = User.create!( first_name: "Tony", last_name: "Rumor ", email:"tony@gmail.com", password: "123456", profile: "I'm new in New York and I love fast food! 💅",  preference:"Fast food")
+carmen = User.create!( first_name: "Carmen", last_name: "Rumor ", email:"carmen@gmail.com", password: "123456", profile: "Hola! Cumo esta! I'm from Barcelona! I'm studying organic make-up in NY. Would like to meet new people!",  preference:"Italian")
 
 
 puts 'Creating Events'
@@ -80,7 +80,24 @@ event_23 = Event.create!(user: azadeh, event_name: "Quick dinner before the part
 event_24 = Event.create!(user: tony, event_name: "I'm lovin' it🍟", cuisine: "Fast food", description: "I love McNuggets. Don't judge 🍔", restaurant_name: "Mcdonald's", restaurant_address: "Rheinsberger Str. 4, 10115 Berlin", restaurant_price_range: 1, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
 event_25 = Event.create!(user: serenity, event_name: "Fancy Salad 🥗", cuisine: "Vegetarian", description: "On my cheat day. I want a salad 🥗", restaurant_name: "Divalicious", restaurant_address: "Strelitzer Str. 60, 10115 Berlin", restaurant_price_range: 2, start_time: DateTime.parse("13/03/2020 20:30"), end_time: DateTime.parse("13/03/2020 21:00"), spots: 3 )
 
+# 2021 NYC
+event_NYC_1_Dimsum = Event.create!(user: mason, event_name: "Dim Sum 🥟", cuisine: "Chinese", description: "This pandemic has pushed Chinatown businesses to the brink. Let's support these yummy restaurants! Starting from my favorite dim sum place 😛", restaurant_name: "Jin Fong", restaurant_address: "20 Elizabeth St, New York, NY 10013", restaurant_price_range: 1, start_time: DateTime.parse("16/05/2021 12:30"), end_time: DateTime.parse("16/05/2021 14:30"), spots: 3 )
+event_NYC_2_Malay = Event.create!(user: felix, event_name: "Malaysian 🌶", cuisine: "Chinese", description: "Love spicy hot food especially Malaysian food!🔥", restaurant_name: "Jin Fong", restaurant_address: "199 Grand St, New York, NY 10013", restaurant_price_range: 1, start_time: DateTime.parse("16/06/2021 12:30"), end_time: DateTime.parse("16/06/2021 14:30"), spots: 3 )
+event_NYC_3_Pancake = Event.create!(user: serenity, event_name: "Fancy pancake brunch!🥞", cuisine: "New American", description: "I love fluffy pancakes with a glass of milk. And of course, with a glass of bottomless Shangri-la, as you should 💅", restaurant_name: "Cornerstone Cafe", restaurant_address: "17 Avenue B, New York, NY 10009", restaurant_price_range: 3, start_time: DateTime.parse("30/05/2021 13:00"), end_time: DateTime.parse("30/05/2021 15:00"), spots: 4 )
+event_NYC_4_Cuban = Event.create!(user: clem, event_name: "Late lunch, or early dinner?", cuisine: "New American", description: "This Cuban-Chinese restaurant has the best char-siew ever! The restaurant capacity is almost 100% despite the covid restrictions. It's the cuban chinese fusion for me.", restaurant_name: "Calle Dao Chelsea", restaurant_address: "461 W 23rd St, New York, NY 10011", restaurant_price_range: 3, start_time: DateTime.parse("30/10/2021 17:00"), end_time: DateTime.parse("30/10/2021 18:00"), spots: 4 )
+event_NYC_5_Yasuda = Event.create!(user: burak, event_name: "Attitude Sushi", cuisine: "Japanese", description: "Don't know why almost all good sushi restaurants seem like have attitude problem...by they are so fresh and good! Would be nice if you can join me, so I don't have to handle that kind of fishy-attitude alone LOL", restaurant_name: "Sushi Yasuda", restaurant_address: "204 E 43rd St, New York, NY 10017", restaurant_price_range: 3, start_time: DateTime.parse("11/07/2021 13:00"), end_time: DateTime.parse("11/07/2021 13:00"), spots: 2 )
+event_NYC_6_McD = Event.create!(user: tony, event_name: "Broadway McDonalds!🍟", cuisine: "Fast Food", description: "I heard because of covid-19 nobody is visiting Times Square anymore. Perfect. Now we can have more space to enjoy Mcdonalds 🍔", restaurant_name: "McDonald's Times Square", restaurant_address: "556 7th Ave, New York, NY 10018", restaurant_price_range: 1, start_time: DateTime.parse("05/07/2021 12:00"), end_time: DateTime.parse("05/07/2021 13:30"), spots: 3 )
+event_NYC_7_Pizza = Event.create!(user: alice, event_name: "NY Pizza 🍕", cuisine: "Fast food", description: "I work at Vogue and these bitches are so mean to me when I order pizza. Pizza can be fashionable too! Come join me for a slice!", restaurant_name: "99 cents Fresh Pizza", restaurant_address: "166 W 27th St, New York, NY 10001", restaurant_price_range: 1, start_time: DateTime.parse("05/05/2021 12:00"), end_time: DateTime.parse("05/05/2021 13:30"), spots: 3 )
+event_NYC_8_Bagel = Event.create!(user: cody, event_name: "Cream cheess Bagel 🥯", cuisine: "Fast Food", description: "My toxic coworkers are boring. I want to meet people outside of my office. There is a bagel shop near my office they serve amazing fresh bagels and heavenly cream cheese.", restaurant_name: "Zucker's Bagels", restaurant_address: "146 Chambers St, New York, NY 10007", restaurant_price_range: 2, start_time: DateTime.parse("29/05/2021 12:00"), end_time: DateTime.parse("29/05/2021 13:30"), spots: 2 )
+event_NYC_9_Salad = Event.create!(user: carmen, event_name: "Organic salad 🥗", cuisine: "New American", description: "I love a bowl of fresh salad with a lot of high quality Spanish extra virgin olive oil. Join mamita for a bowl of green!", restaurant_name: "Just Salad", restaurant_address: "53 E 8th St, New York, NY 10003", restaurant_price_range: 2, start_time: DateTime.parse("09/06/2021 12:45"), end_time: DateTime.parse("09/06/2021 13:45"), spots: 2 )
+event_NYC_10_Cake = Event.create!(user: mancy, event_name: "Brooklyn Cheesecake Diva 🍰", cuisine: "Fast Food", description: "This diva cafe is divalicious! They serve the best cheese cake in Brookly for the BK divas! ", restaurant_name: "Cheesecake Diva", restaurant_address: "7309 3rd Ave, Brooklyn, NY 11209", restaurant_price_range: 2, start_time: DateTime.parse("08/08/2021 12:45"), end_time: DateTime.parse("08/08/2021 13:45"), spots: 4 )
+event_NYC_11_Claypot = Event.create!(user: sherwin, event_name: "Claypot rice", cuisine: "Chinese", description: "If you live for rice. You live claypot rice! The rice has more flavor and texture. Delicious!", restaurant_name: "Clay Pot (West Village)", restaurant_address: "270 Bleecker St, New York, NY 10014", restaurant_price_range: 2, start_time: DateTime.parse("09/09/2021 12:45"), end_time: DateTime.parse("09/09/2021 13:45"), spots: 4 )
+event_NYC_12_Taco = Event.create!(user: alessandro, event_name: "Taco Tuesday🌮", cuisine: "Vegan", description: "Vegan taco!", restaurant_name: "Oaxaca Taqueria", restaurant_address: "424 Amsterdam Ave, New York, NY 10024", restaurant_price_range: 2, start_time: DateTime.parse("14/12/2021 14:45"), end_time: DateTime.parse("14/12/2021 16:45"), spots: 4 )
+event_NYC_13_Halal = Event.create!(user: azadeh, event_name: "Halal food", cuisine: "Middle Eastern", description: "Hola halal for the queens in Queens!", restaurant_name: "Halal Kitchen", restaurant_address: "4202A Greenpoint Ave, Queens, NY 11104", restaurant_price_range: 2, start_time: DateTime.parse("11/11/2021 12:45"), end_time: DateTime.parse("11/11/2021 14:00"), spots: 4 )
+
+
 puts 'Creating Bookings'
+
 # Booking
 booking_1 = Booking.create!( event: event_1, user: mark ) #pasta
 booking_2 = Booking.create!( event: event_1, user: emma )
@@ -132,7 +149,34 @@ booking_33 = Booking.create!( event: event_20, user: mana ) #pizza
 booking_34 = Booking.create!( event: event_20, user: azadeh )
 booking_35 = Booking.create!( event: event_20, user: mason )
 
+puts 'Creating Bookings 2021'
+# Booking 2021
+booking_NYC_1_Dimsum_a = Booking.create!( event: event_NYC_1_Dimsum, user: felix)
 
+booking_NYC_2_Malay_a = Booking.create!( event: event_NYC_2_Malay, user: mason )
+
+booking_NYC_3_Pancake_a = Booking.create!( event: event_NYC_3_Pancake, user: carmen)
+
+booking_NYC_4_Cuban_a = Booking.create!( event: event_NYC_4_Cuban, user: sherwin)
+
+booking_NYC_5_Yasuda_a = Booking.create!( event: event_NYC_5_Yasuda, user: tony)
+
+booking_NYC_6_McD_a = Booking.create!( event: event_NYC_6_McD, user: burak)
+
+booking_NYC_7_Pizza_a = Booking.create!( event: event_NYC_7_Pizza, user: alessandro)
+
+booking_NYC_8_Bagel_a = Booking.create!( event: event_NYC_8_Bagel, user: felix)
+
+booking_NYC_9_Salad_a = Booking.create!( event: event_NYC_9_Salad, user: mason)
+
+booking_NYC_10_Cake_a = Booking.create!( event: event_NYC_10_Cake, user: serenity)
+
+booking_NYC_11_Claypot_a = Booking.create!( event: event_NYC_11_Claypot, user: cody)
+booking_NYC_11_Claypot_b = Booking.create!( event: event_NYC_11_Claypot, user: clem)
+
+booking_NYC_12_Taco_a = Booking.create!( event: event_NYC_12_Taco, user: alice)
+
+booking_NYC_13_Halal_a = Booking.create!( event: event_NYC_13_Halal, user: mana)
 
 
 puts 'Creating events photos 1'
@@ -265,6 +309,60 @@ event_25.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image
 event_25.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584033229/Restaurant%20Picutres/image_uoaitx.jpg"), filename: 'rp2.jpg', content_type: 'image/jpg')
 event_25.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584033224/Restaurant%20Picutres/just-salad-sign-500x375_ndeb0l.jpg"), filename: 'rp3.jpg', content_type: 'image/jpg')
 event_25.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1583921046/Restaurant%20Picutres/factory-kitchen-berlin-by-stephan-pramme-7_0_pbdaik.jpg"), filename: 'rp4.jpg', content_type: 'image/jpg')
+
+puts 'uploading photos 2021'
+event_NYC_1_Dimsum.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619402475/Restaurant%20Picutres/dimsum_bwhssa.jpg"), filename: 'dimsum1' , content_type: 'image/jpg')
+event_NYC_1_Dimsum.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408575/Restaurant%20Picutres/har-gow-shrimp-dumplings-recipe-694503-hero-01-cde6f5c086d44b74be6b7003f8db6e46_sht6pc.jpg"), filename: 'dimsum2' , content_type: 'image/jpg')
+event_NYC_1_Dimsum.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408595/Restaurant%20Picutres/NoahDevereaux_Chinatown_072_JingFong_swh20z.jpg"), filename: 'dimsum3' , content_type: 'image/jpg')
+
+event_NYC_2_Malay.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619402433/Restaurant%20Picutres/Malaysian_xtatcn.jpg"), filename: 'malay1' , content_type: 'image/jpg')
+event_NYC_2_Malay.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409602/Nyonya_2_pli1jb.jpg"), filename: 'malay2' , content_type: 'image/jpg')
+event_NYC_2_Malay.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408647/Restaurant%20Picutres/29fbf814c98cf0936eb385023b14595ea0-nyonya-1.rsocial.w1200_wa2zzm.jpg"), filename: 'malay3' , content_type: 'image/jpg')
+
+event_NYC_3_Pancake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408723/Restaurant%20Picutres/48df72_205c3c74802f8bd395db24d2e3fb313d_rdzuqz.jpg"), filename: 'pancake1', content_type: 'image/jpg')
+event_NYC_3_Pancake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408731/Restaurant%20Picutres/https_3A_2F_2Fcdn.evbuc.com_2Fimages_2F94540745_2F276274032906_2F1_2Foriginal_ffpdhs.jpg"), filename: 'pancake2', content_type: 'image/jpg')
+event_NYC_3_Pancake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408769/Restaurant%20Picutres/200401115024-underscored-brunch-lead_ffxyt9.jpg"), filename: 'pancake3', content_type: 'image/jpg')
+
+event_NYC_4_Cuban.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408837/Restaurant%20Picutres/29107152_ns6opa.jpg"), filename: 'cuban1', content_type: 'image/jpg')
+event_NYC_4_Cuban.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408828/Restaurant%20Picutres/calle-dao-bryant-park_mgrhdo.jpg"), filename: 'cuban2', content_type: 'image/jpg')
+event_NYC_4_Cuban.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408848/Restaurant%20Picutres/lunch-menu_t6leud.jpg"), filename: 'cuban3', content_type: 'image/jpg')
+
+event_NYC_5_Yasuda.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408878/Restaurant%20Picutres/6a00df351eb58e88340133f4ecdc8a970b_euhjjz.jpg"), filename: 'yasuda1', content_type: 'image/jpg')
+event_NYC_5_Yasuda.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408864/Restaurant%20Picutres/image_glblss.jpg"), filename: 'yasuda2', content_type: 'image/jpg')
+event_NYC_5_Yasuda.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408892/Restaurant%20Picutres/photo0jpg_dc1evq.jpg"), filename: 'yasuda3', content_type: 'image/jpg')
+
+event_NYC_6_McD.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408910/Restaurant%20Picutres/mcd_rua8682_100105467_qn6vzv.jpg"), filename:'mcd1' , content_type: 'image/jpg')
+event_NYC_6_McD.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408923/Restaurant%20Picutres/mcdonalds-60_e9mkys.jpg"), filename:'mcd2' , content_type: 'image/jpg')
+event_NYC_6_McD.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408943/Restaurant%20Picutres/20954315261_fe80656f07_b_wbzams.jpg"), filename:'mcd3' , content_type: 'image/jpg')
+
+event_NYC_7_Pizza.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408987/Restaurant%20Picutres/288091_498121216874867_447814281_o_chrtp4.jpg"), filename: 'pizza1' , content_type: 'image/jpg')
+event_NYC_7_Pizza.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409007/Restaurant%20Picutres/son-attacked-the-slice_vurx5m.jpg"), filename: 'pizza2' , content_type: 'image/jpg')
+event_NYC_7_Pizza.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409028/Restaurant%20Picutres/99-Cent-Fresh-Pizza-Greenwich-Village_m2psby.jpg"), filename: 'pizza3' , content_type: 'image/jpg')
+
+event_NYC_8_Bagel.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409058/Restaurant%20Picutres/zucker-s-bagels-grand_rdzlaj.jpg"), filename: 'bagel1' , content_type: 'image/jpg')
+event_NYC_8_Bagel.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409080/Restaurant%20Picutres/IMG_6516_pdsyvx.jpg"), filename: 'bagel2' , content_type: 'image/jpg')
+event_NYC_8_Bagel.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409104/Restaurant%20Picutres/b7109740aff09797d685de4e393570f6_kk0xiy.png"), filename: 'bagel3' , content_type: 'image/jpg')
+
+event_NYC_9_Salad.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409157/Restaurant%20Picutres/14600973_10100759340936673_5099511868414726650_n.0_vkjoqz.jpg"), filename:'salad1' , content_type: 'image/jpg')
+event_NYC_9_Salad.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409185/Restaurant%20Picutres/just-salad_y4b8pi.jpg"), filename:'salad2' , content_type: 'image/jpg')
+event_NYC_9_Salad.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409216/Restaurant%20Picutres/justsaladpromo_0_avubmf.jpg"), filename:'salad3' , content_type: 'image/jpg')
+
+event_NYC_10_Cake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409244/Restaurant%20Picutres/cheesecake-diva-bay-ridge-usjapanfam-storefront_orig_hc7psk.jpg"), filename:'cake1' , content_type: 'image/jpg')
+event_NYC_10_Cake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409275/Restaurant%20Picutres/raster-static.postmates.com_m4qwha.png"), filename:'cake2' , content_type: 'image/jpg')
+event_NYC_10_Cake.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409309/Restaurant%20Picutres/e38643_925a28b4e775452da61d4fb4dc8acff8_mv2_ugi86h.jpg"), filename:'cake3' , content_type: 'image/jpg')
+
+event_NYC_11_Claypot.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408454/Restaurant%20Picutres/raster-static.postmates.com_xmzwzt.jpg"), filename:'clay1' , content_type: 'image/jpg')
+event_NYC_11_Claypot.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619408452/Restaurant%20Picutres/large_kume5g.jpg"), filename:'clay2' , content_type: 'image/jpg')
+
+event_NYC_12_Taco.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409410/Restaurant%20Picutres/Oaxaca_20Taqueria_1_q3bmmq.jpg"), filename: 'taco1', content_type: 'image/jpg')
+event_NYC_12_Taco.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409343/Restaurant%20Picutres/modern-mexican-ambiance_gd03oc.jpg"), filename: 'taco2', content_type: 'image/jpg')
+event_NYC_12_Taco.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409377/Restaurant%20Picutres/Oaxaca2wm_k9chs5.jpg"), filename: 'taco3', content_type: 'image/jpg')
+
+event_NYC_13_Halal.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409448/Restaurant%20Picutres/FOOD-CART-1_at3zq2.jpg"), filename:'halal1' , content_type: 'image/jpg')
+event_NYC_13_Halal.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409486/Restaurant%20Picutres/4a3505e4fd269f6e60024819d518f60b_-united-states-new-york-queens-county-sikders-halal-food-929-245-5495htm_jq9h6q.jpg"), filename:'halal2' , content_type: 'image/jpg')
+event_NYC_13_Halal.photos.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1619409735/Restaurant%20Picutres/Halal-Cart-Style-Chicken-3_k1ddyh.jpg"), filename:'halal3' , content_type: 'image/jpg')
+
+
 
 puts 'Creating friends profile pics'
 tony.photo.attach(io: URI.open("https://res.cloudinary.com/lunchmates/image/upload/v1584031592/User%20Pictures/tony_hcmygs.jpg"), filename: 'pf.jpg', content_type: 'image/jpg')
