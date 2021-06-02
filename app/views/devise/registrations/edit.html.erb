@@ -5,8 +5,10 @@
   <div class="row pt-4">
     <div class="cards col-12">
       <div class="diet-preference">
-        
+        <p>Your diet preference: </p>
+        <%= @current_user.preference %>
       </div>
+        <br>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
