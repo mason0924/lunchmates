@@ -34,7 +34,7 @@
         <p><strong><%= @user.first_name %></strong> is  going to <strong><%= @event.restaurant_name %></strong> for lunch.
         Both of you love <strong><i><%= current_user.preference.downcase %></i></strong> cuisine!
         <% else %>
-        <p> Bummer, there are currently no events matching your preference <strong><i><%= current_user.preference.downcase %></i></strong> 😞</p>
+        <p> Bummer, there are currently no events matching your preference <strong><i><%= current_user.preference %></i></strong> 😞</p>
         <p>However, you might like to try  <strong><%= @event.cuisine %></strong> cuisine! 🤤</p>
         <p></p><strong><%= @user.first_name %></strong> is  going to <strong><%= @event.restaurant_name %></strong> for lunch.
         <% end %>

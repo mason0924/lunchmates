@@ -1,25 +1,22 @@
 <div class="container pt-4">
   
-  <h2>Edit Profile</h2>
-  
+  <div class="position-relative back-btn">
+    <%= link_to '', :back, class: "absolute-0-0"%>
+    <%= '<i class="fas fa-chevron-left back-btn"></i>'.html_safe %>
+  </div>
+
+  <div class="diet-preference">
+    <h2>Hi <%=@current_user.first_name%> <%=@current_user.last_name%>!</h2>
+    <h3>Your selected diet preference is: <%= @current_user.preference %></h3>     
+  </div>
+
   <div class="row pt-4">
     <div class="cards col-12">
-      <div class="diet-preference">
-        <p>Your diet preference: </p>
-        <%= @current_user.preference %>
-      </div>
-        <br>
-
-        <%=  %>
-        ERB: <%=@current_user.first_name %>
-
-        <br>
-
         <%= simple_form_for(@current_user) do |f| %>
           <%= f.input :first_name %>
-          <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Chinese","Dessert","Fast food","German","Greek","Indian","Italian","Japanese","Lebanese","Middle Eastern","New American","Vegan","Vegetarian"] %>
-
-          <%= f.button :submit, class: "btn btn-warning" %>
+          <%= f.input :last_name %>
+          <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fastfood", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
+          <%= f.button :submit, 'Update Profile', class: "btn btn-warning" %>        
       <% end %>
 
       <br>
@@ -34,29 +31,33 @@
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
           <% end %>
 
-          <%= f.input :password,
-                      hint: "leave it blank if you don't want to change it",
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
           <%= f.input :current_password,
                       hint: "we need your current password to confirm your changes",
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
+                      
+          <%= f.input :password,
+                      hint: "leave it blank if you don't want to change it",
+                      required: false,
+                      input_html: { autocomplete: "new-password" },
+                      placeholder: 'new password' %>
+          <%= f.input :password_confirmation,
+                      required: false,
+                      input_html: { autocomplete: "new-password" },
+                      placeholder: 'confirm new password' %>
+          
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Update" %>
+          <%= f.button :submit, "Update Login Info", class: "btn btn-warning" %>
         </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
+      <br>
 
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-      <%= link_to "Back", :back %>
+      <p>Unhappy?</p>
+      <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete , class: "btn btn-outline-dark " %>
+      <br>
     </div>
   </div>
 </div>

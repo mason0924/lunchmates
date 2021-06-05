@@ -12,7 +12,7 @@
         <%= f.input :description %>
         <%= f.input :restaurant_name %>
         <%= f.input :restaurant_address %>
-        <%= f.input :cuisine%>
+        <%= f.input :cuisine, priority: [ "Brunch" ], collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fastfood", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
         <%= f.input :restaurant_price_range, collection: [["$", 1], ["$$", 2], ["$$$", 3]] %>
         <%= f.input :start_time, as: :string, required: false, input_html: {class: "timepicker"} %>
         <%= f.input :end_time, as: :string, required: false, input_html: {class: "timepicker"} %>
