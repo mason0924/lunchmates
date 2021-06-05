@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
-  resources :users, only: [:show]
+  resources :users, only: [:show, :edit, :update]
   resources :bookings, only: [:destroy]
   # resources :dashboards, only: [:index, :show]
   get 'dashboard', to: "dashboards#show"

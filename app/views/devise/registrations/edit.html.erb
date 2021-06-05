@@ -10,7 +10,21 @@
       </div>
         <br>
 
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%=  %>
+        ERB: <%=@current_user.first_name %>
+
+        <br>
+
+        <%= simple_form_for(@current_user) do |f| %>
+          <%= f.input :first_name %>
+          <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Chinese","Dessert","Fast food","German","Greek","Indian","Italian","Japanese","Lebanese","Middle Eastern","New American","Vegan","Vegetarian"] %>
+
+          <%= f.button :submit, class: "btn btn-warning" %>
+      <% end %>
+
+      <br>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
 
         <div class="form-inputs">

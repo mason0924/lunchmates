@@ -9,4 +9,16 @@ class UserPolicy < ApplicationPolicy
     return true
   end
 
+  # added 2021
+  def update?
+    current_user?
+  end
+
+  # added 2021
+  private
+  
+  # added 2021
+  def current_user?
+    user == @user
+  end
 end
