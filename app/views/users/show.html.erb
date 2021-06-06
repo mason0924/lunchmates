@@ -9,6 +9,7 @@
       <%= cl_image_tag @user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar2"%>
       <h1><%= @user.first_name %></h1>
       <p><%= @user.profile %></p>
+      <p>Food Preference: <%= @user.preference %></p>
     </div>
 </div>
 

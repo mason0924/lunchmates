@@ -12,6 +12,7 @@
           <%= f.input :restaurant_name %>
           <%= f.input :restaurant_address %>
           <%= f.input :restaurant_price_range %>
+          <%= f.input :cuisine, collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fast food", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
           <%= f.input :start_time %>
           <%= f.input :end_time %>
           <%= f.input :spots %>
