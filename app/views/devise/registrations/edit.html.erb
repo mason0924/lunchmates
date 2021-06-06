@@ -6,16 +6,23 @@
   </div>
 
   <div class="diet-preference">
+  </div>
+
+<div class="user-content">
     <h2>Hi <%=@current_user.first_name%> <%=@current_user.last_name%>!</h2>
     <h3>Your selected diet preference is: <%= @current_user.preference %></h3>     
-  </div>
+      <%= cl_image_tag @user.get_photo_url, width: 200, height: 200, crop: :fill, class: "avatar2"%>
+      <p><%= @user.profile %></p>
+    </div>
+
 
   <div class="row pt-4">
     <div class="cards col-12">
         <%= simple_form_for(@current_user) do |f| %>
           <%= f.input :first_name %>
           <%= f.input :last_name %>
-          <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fastfood", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
+          <%= f.input :profile %>
+          <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fast food", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
           <%= f.button :submit, 'Update Profile', class: "btn btn-warning" %>        
       <% end %>
 
