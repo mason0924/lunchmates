@@ -15,7 +15,6 @@
       <p><%= @user.profile %></p>
     </div>
 
-
   <div class="row pt-4">
     <div class="cards col-12">
         <%= simple_form_for(@current_user) do |f| %>
@@ -23,7 +22,8 @@
           <%= f.input :last_name %>
           <%= f.input :profile %>
           <%= f.input :preference, priority: [  @current_user.preference ], collection: ["Alcohol", "American", "Bakery", "Brunch", "Bubble Tea", "Cafe", "Chinese", "Dessert", "Fast food", "French", "Fusion", "German", "Greek", "Halal", "Healthy", "Indian", "Italian", "Japanese", "Korean", "Latin American", "Lebanese", "Mexican", "Middle Eastern", "New American", "Pizza", "Seafood", "Smoothies & Juices", "Spanish", "Thai", "Vegan", "Vegetarian"] %>
-          <%= f.button :submit, 'Update Profile', class: "btn btn-warning" %>        
+          <%= f.input :photo, as: :file, :label => "Profile Picture", input_html: { multiple: false } %> 
+          <%= f.button :submit, 'Update Profile', class: "btn btn-warning" %>       
       <% end %>
 
       <br>
@@ -32,7 +32,7 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
+          <%= f.input :email, required: true, autofocus: false %>
 
           <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
             <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
