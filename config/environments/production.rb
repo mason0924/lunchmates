@@ -1,6 +1,23 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }
+  config.action_mailer.default_url_options = { host: "https://www.lunchmates.club" }
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  #load email
+  email_config = Rails.application.config_for(:emailpassword)
+
+  # Configure Action Mailer to use SMTP for sending emails
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    user_name: Rails.application.credentials.emailpassword[:emailname],
+    password: Rails.application.credentials.emailpassword[:emailpassword],
+    authentication: 'plain',
+    enable_starttls_auto: true,
+    open_timeout: 5,
+    read_timeout: 5,
+    ssl: true
+  }
 
   # Code is not reloaded between requests.
   config.cache_classes = true

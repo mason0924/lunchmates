@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     resources :messages, only: [:create]
   end
 
+  get '/send_test_email', to: 'users#send_test_email', as: :send_test_email
+
   resources :users, only: [:show, :edit, :update]
   resources :bookings, only: [:destroy]
   # resources :dashboards, only: [:index, :show]
