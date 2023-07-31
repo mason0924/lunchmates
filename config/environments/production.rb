@@ -8,7 +8,7 @@ Rails.application.configure do
   # Configure Action Mailer to use SMTP for sending emails
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address: 'smtp.gmail.com',
+    address: 's127.goserver.host',
     port: 587,
     user_name: Rails.application.credentials.emailpassword[:emailname],
     password: Rails.application.credentials.emailpassword[:emailpassword],

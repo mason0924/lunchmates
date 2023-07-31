@@ -7,7 +7,7 @@ class UserMailer < ApplicationMailer
     @user = user #chatggpt
     mail(
       to: email_address_with_name(@user.email, @user.first_name),
-      subject: 'chat+docu Welcome to My Awesome Site'
+      subject: 'Welcome to My Awesome Site'
     )
     # to: @user.email, subject: 'Chat Welcome to Lunchmates!')
   end

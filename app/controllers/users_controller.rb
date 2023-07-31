@@ -5,7 +5,7 @@ class UsersController < ApplicationController
   # Action to send a test email
   def send_test_email
     # Replace this with the email address where you want to receive the test email.
-    test_email = 'masonev@gmail.com'  # Change this to the desired test email address
+    test_email = 'lunchmate2020@gmail.com'  # Change this to the desired test email address
 
     # Create a test user with the email address provided above.
     test_user = User.new(email: test_email)
